@@ -59,9 +59,7 @@ class ViewController: UIViewController {
             }))
             
             self.present(alertVC, animated: true, completion: nil)
-            
-            
-            
+ 
         default:
             break
         }
@@ -77,7 +75,7 @@ class ViewController: UIViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
+        self.present(imagePickerController, animated: true, completion: nil)
     }
 
 }
