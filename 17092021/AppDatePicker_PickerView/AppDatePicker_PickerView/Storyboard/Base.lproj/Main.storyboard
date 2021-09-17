@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="739.13043478260875" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Segunda View Controller-->
         <scene sceneID="OJv-fy-Inu">
             <objects>
-                <viewController id="Xzc-BH-u2t" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SegundaViewController" id="Xzc-BH-u2t" customClass="SegundaViewController" customModule="AppDatePicker_PickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xni-Eb-by7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +130,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K9L-3V-hpa"/>
+                    <connections>
+                        <outlet property="codigoPOstalTF" destination="Xgk-Gs-4NI" id="45D-B8-4cC"/>
+                        <outlet property="fotosPerfilTF" destination="uoh-gN-CHa" id="ofn-tC-DOo"/>
+                        <outlet property="localidadesTF" destination="FfR-37-FA5" id="xSR-qW-McZ"/>
+                        <outlet property="prioridadTeletrabajoTF" destination="Jr1-Ek-XQM" id="Srb-gw-nm2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bK9-Y1-chr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
