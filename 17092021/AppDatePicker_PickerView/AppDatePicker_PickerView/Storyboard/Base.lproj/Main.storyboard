@@ -26,7 +26,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-cW-SMT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FQ-cW-SMT">
                                 <rect key="frame" x="20" y="178" width="350" height="183"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z39-Fi-fdI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagen1" translatesAutoresizingMaskIntoConstraints="NO" id="z39-Fi-fdI">
                                 <rect key="frame" x="20" y="381" width="350" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="HQK-gA-6kW"/>
@@ -71,6 +71,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detalleTextoQuesoTV" destination="2FQ-cW-SMT" id="eXY-KO-nUg"/>
+                        <outlet property="imagenQuesoIV" destination="z39-Fi-fdI" id="8l8-mB-Q01"/>
+                        <outlet property="pickerQuesoPV" destination="6qZ-Ky-0Sm" id="Rtk-Sd-6oj"/>
+                        <outlet property="tituloQuesoLBL" destination="gUw-Qr-0mY" id="WKb-uf-rpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,10 +105,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uoh-gN-CHa">
-                                <rect key="frame" x="20" y="270" width="350" height="251.33333333333337"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maria" translatesAutoresizingMaskIntoConstraints="NO" id="uoh-gN-CHa">
+                                <rect key="frame" x="20" y="270" width="350" height="444"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uoh-gN-CHa" secondAttribute="height" multiplier="358:257" id="fic-pB-TTz"/>
+                                    <constraint firstAttribute="width" secondItem="uoh-gN-CHa" secondAttribute="height" multiplier="358:257" constant="-268.49027237354085" id="fic-pB-TTz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -149,6 +155,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="imagen1" width="541" height="426"/>
+        <image name="maria" width="2077" height="2767"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
