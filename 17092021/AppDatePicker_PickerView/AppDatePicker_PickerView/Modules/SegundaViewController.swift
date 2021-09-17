@@ -23,19 +23,19 @@ class SegundaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configPickerView(tag: 1,
+        Utils.shared.configPickerView(tag: 1,
                          textField: localidadesTF,
                          arrayData: localidadesArrayData,
                          delegate: self,
                          datasource: self)
         
-        configPickerView(tag: 2,
+        Utils.shared.configPickerView(tag: 2,
                          textField: codigoPOstalTF,
                          arrayData: codigopostalArrayData,
                          delegate: self,
                          datasource: self)
         
-        configPickerView(tag: 3,
+        Utils.shared.configPickerView(tag: 3,
                          textField: prioridadTeletrabajoTF,
                          arrayData: prioridadTeletrabajoArrayData,
                          delegate: self,

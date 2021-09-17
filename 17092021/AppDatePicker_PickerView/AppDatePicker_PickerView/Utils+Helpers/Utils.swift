@@ -8,17 +8,24 @@
 import Foundation
 import UIKit
 
-func configPickerView(tag: Int,
-                      textField custom: UITextField,
-                      arrayData data: [String],
-                      delegate customDelegate: UIPickerViewDelegate,
-                      datasource customDatasource: UIPickerViewDataSource) {
+class Utils {
     
-    let pickerView = UIPickerView()
-    pickerView.delegate = customDelegate
-    pickerView.dataSource = customDatasource
-    pickerView.tag = tag
-    custom.inputView = pickerView
-    custom.text = data[0]
+    static let shared = Utils()
     
+    func configPickerView(tag: Int,
+                          textField custom: UITextField,
+                          arrayData data: [String],
+                          delegate customDelegate: UIPickerViewDelegate,
+                          datasource customDatasource: UIPickerViewDataSource) {
+        
+        let pickerView = UIPickerView()
+        pickerView.delegate = customDelegate
+        pickerView.dataSource = customDatasource
+        pickerView.tag = tag
+        custom.inputView = pickerView
+        custom.text = data[0]
+        
+    }
 }
+
+
