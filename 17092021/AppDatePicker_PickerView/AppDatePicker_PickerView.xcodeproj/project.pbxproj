@@ -56,15 +56,39 @@
 		B45D0C3526F4DF890066F4CE /* AppDatePicker_PickerView */ = {
 			isa = PBXGroup;
 			children = (
-				B45D0C3626F4DF890066F4CE /* AppDelegate.swift */,
-				B45D0C3826F4DF890066F4CE /* SceneDelegate.swift */,
-				B45D0C3A26F4DF890066F4CE /* ViewController.swift */,
-				B45D0C3C26F4DF890066F4CE /* Main.storyboard */,
+				B45D0C4E26F4E0490066F4CE /* Modules */,
+				B45D0C4D26F4E03F0066F4CE /* Storyboard */,
+				B45D0C4B26F4E02C0066F4CE /* Core */,
 				B45D0C3F26F4DF8B0066F4CE /* Assets.xcassets */,
 				B45D0C4126F4DF8B0066F4CE /* LaunchScreen.storyboard */,
 				B45D0C4426F4DF8B0066F4CE /* Info.plist */,
 			);
 			path = AppDatePicker_PickerView;
+			sourceTree = "<group>";
+		};
+		B45D0C4B26F4E02C0066F4CE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B45D0C3626F4DF890066F4CE /* AppDelegate.swift */,
+				B45D0C3826F4DF890066F4CE /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B45D0C4D26F4E03F0066F4CE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B45D0C3C26F4DF890066F4CE /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B45D0C4E26F4E0490066F4CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B45D0C3A26F4DF890066F4CE /* ViewController.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.Tecnologia.iOS.AppDatePicker-PickerView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icologic.Tecnologia.iOS.AppDatePicker-PickerView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
