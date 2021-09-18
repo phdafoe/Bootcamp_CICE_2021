@@ -73,7 +73,7 @@ extension ViewController: UIPickerViewDelegate {
         default:
             self.detalleTextoQuesoTV.text = "El queso DOP se produce en las provincias de Caserta y Salerno y en algunos municipios de las provincias de Nápoles, Benevento, Latina y Foggia con leche de búfala. En la misma Italia y en otros países, como Argentina, Colombia, España, Paraguay, Perú, República Dominicana, Uruguay, se preparan mozzarellas con leche de vaca."
         }
-    }   
+    }
 }
 
 extension ViewController: UIPickerViewDataSource {
