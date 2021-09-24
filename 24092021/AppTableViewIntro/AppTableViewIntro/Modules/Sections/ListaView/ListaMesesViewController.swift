@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ListaMesesViewController: UIViewController {
+class ListaMesesViewController: UIViewController, ReuseIdentifierViewControllerProtocol {
     
     
     // MARK: - Variables
     let arrayMeses = ["Enero", "Febrero", "Marzo", "Abril"]
-    
     
     // MARK: - IBOUtlets
     @IBOutlet weak var listaMesesTableView: UITableView!
@@ -26,7 +25,7 @@ class ListaMesesViewController: UIViewController {
     private func configuracionTableView() {
         self.listaMesesTableView.delegate = self
         self.listaMesesTableView.dataSource = self
-        self.listaMesesTableView.register(UINib(nibName: "MesesCell", bundle: nil), forCellReuseIdentifier: "MesesCell")
+        self.listaMesesTableView.register(UINib(nibName: MesesCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: MesesCell.defaultReuseIdentifier)
     }
     
 }
@@ -43,7 +42,7 @@ extension ListaMesesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellMeses = self.listaMesesTableView.dequeueReusableCell(withIdentifier: "MesesCell", for: indexPath) as! MesesCell
+        let cellMeses = self.listaMesesTableView.dequeueReusableCell(withIdentifier: MesesCell.defaultReuseIdentifier, for: indexPath) as! MesesCell
         
         //cellMeses.mesesLBL.text = self.arrayMeses[indexPath.row]
         cellMeses.configuracionCell(data: self.arrayMeses[indexPath.row])

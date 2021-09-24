@@ -12,7 +12,7 @@ protocol MesesCellProtocol {
 }
 
 
-class MesesCell: UITableViewCell {
+class MesesCell: UITableViewCell, ReuseIdentifierProtocol {
     
     // MARK: - IBOutles
     @IBOutlet weak var mesesLBL: UILabel!
