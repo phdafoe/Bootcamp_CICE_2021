@@ -11,7 +11,6 @@ protocol MesesCellProtocol {
     func configuracionCell(data: String)
 }
 
-
 class MesesCell: UITableViewCell, ReuseIdentifierProtocol {
     
     // MARK: - IBOutles

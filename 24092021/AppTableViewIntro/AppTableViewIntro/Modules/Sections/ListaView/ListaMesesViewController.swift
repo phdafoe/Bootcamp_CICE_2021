@@ -18,6 +18,7 @@ class ListaMesesViewController: UIViewController, ReuseIdentifierViewControllerP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Meses"
         self.configuracionTableView()
     }
     
@@ -44,10 +45,17 @@ extension ListaMesesViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cellMeses = self.listaMesesTableView.dequeueReusableCell(withIdentifier: MesesCell.defaultReuseIdentifier, for: indexPath) as! MesesCell
         
-        //cellMeses.mesesLBL.text = self.arrayMeses[indexPath.row]
         cellMeses.configuracionCell(data: self.arrayMeses[indexPath.row])
         
         return cellMeses
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = arrayMeses[indexPath.row]
+        let vc = DetalleLIstaMesesViewController()
+        vc.mesSeleccionado = model
+        self.show(vc, sender: nil)
+        //self.present(vc, animated: true, completion: nil)
     }
 }
 

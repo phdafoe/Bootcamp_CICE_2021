@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B4972D5B26FE533D0084D489 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4972D5A26FE533D0084D489 /* Utils.swift */; };
+		B4B7EC1426FF03A200BD4DC5 /* CochesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC1326FF03A200BD4DC5 /* CochesModel.swift */; };
+		B4B7EC1726FF05BD00BD4DC5 /* ListaCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC1626FF05BD00BD4DC5 /* ListaCochesViewController.swift */; };
+		B4B7EC1926FF05F100BD4DC5 /* ListaCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC1826FF05F100BD4DC5 /* ListaCochesViewController.xib */; };
+		B4B7EC1D26FF070300BD4DC5 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC1B26FF070300BD4DC5 /* HomeTabBarViewController.swift */; };
+		B4B7EC1E26FF070300BD4DC5 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC1C26FF070300BD4DC5 /* HomeTabBarViewController.xib */; };
+		B4B7EC2026FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC1F26FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift */; };
+		B4B7EC2426FF0F8C00BD4DC5 /* CochesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2226FF0F8C00BD4DC5 /* CochesCell.swift */; };
+		B4B7EC2526FF0F8C00BD4DC5 /* CochesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC2326FF0F8C00BD4DC5 /* CochesCell.xib */; };
+		B4B7EC2926FF18DD00BD4DC5 /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2826FF18DD00BD4DC5 /* ListaCochesCoordinator.swift */; };
+		B4B7EC2D26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2B26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift */; };
+		B4B7EC2E26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */; };
 		B4C4AAFF26FE186300A74C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4AAFE26FE186300A74C12 /* AppDelegate.swift */; };
 		B4C4AB0826FE186400A74C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C4AB0726FE186400A74C12 /* Assets.xcassets */; };
 		B4C4AB0B26FE186400A74C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C4AB0926FE186400A74C12 /* LaunchScreen.storyboard */; };
@@ -20,6 +31,17 @@
 
 /* Begin PBXFileReference section */
 		B4972D5A26FE533D0084D489 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B4B7EC1326FF03A200BD4DC5 /* CochesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesModel.swift; sourceTree = "<group>"; };
+		B4B7EC1626FF05BD00BD4DC5 /* ListaCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesViewController.swift; sourceTree = "<group>"; };
+		B4B7EC1826FF05F100BD4DC5 /* ListaCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCochesViewController.xib; sourceTree = "<group>"; };
+		B4B7EC1B26FF070300BD4DC5 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B4B7EC1C26FF070300BD4DC5 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B4B7EC1F26FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMesesCoordinator.swift; sourceTree = "<group>"; };
+		B4B7EC2226FF0F8C00BD4DC5 /* CochesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesCell.swift; sourceTree = "<group>"; };
+		B4B7EC2326FF0F8C00BD4DC5 /* CochesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CochesCell.xib; sourceTree = "<group>"; };
+		B4B7EC2826FF18DD00BD4DC5 /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
+		B4B7EC2B26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLIstaMesesViewController.swift; sourceTree = "<group>"; };
+		B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleLIstaMesesViewController.xib; sourceTree = "<group>"; };
 		B4C4AAFB26FE186300A74C12 /* AppTableViewIntro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTableViewIntro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C4AAFE26FE186300A74C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C4AB0726FE186400A74C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +73,52 @@
 			path = "Utils+Helpers";
 			sourceTree = "<group>";
 		};
+		B4B7EC1226FF034100BD4DC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC1326FF03A200BD4DC5 /* CochesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4B7EC1526FF058500BD4DC5 /* CochesListaView */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC2126FF0F6600BD4DC5 /* Cell */,
+				B4B7EC1626FF05BD00BD4DC5 /* ListaCochesViewController.swift */,
+				B4B7EC1826FF05F100BD4DC5 /* ListaCochesViewController.xib */,
+				B4B7EC2826FF18DD00BD4DC5 /* ListaCochesCoordinator.swift */,
+			);
+			path = CochesListaView;
+			sourceTree = "<group>";
+		};
+		B4B7EC1A26FF06D300BD4DC5 /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC1B26FF070300BD4DC5 /* HomeTabBarViewController.swift */,
+				B4B7EC1C26FF070300BD4DC5 /* HomeTabBarViewController.xib */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		B4B7EC2126FF0F6600BD4DC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC2226FF0F8C00BD4DC5 /* CochesCell.swift */,
+				B4B7EC2326FF0F8C00BD4DC5 /* CochesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B4B7EC2A26FF1A9D00BD4DC5 /* DetalleListaMesesView */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC2B26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift */,
+				B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */,
+			);
+			path = DetalleListaMesesView;
+			sourceTree = "<group>";
+		};
 		B4C4AAF226FE186300A74C12 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +138,7 @@
 		B4C4AAFD26FE186300A74C12 /* AppTableViewIntro */ = {
 			isa = PBXGroup;
 			children = (
+				B4B7EC1226FF034100BD4DC5 /* Models */,
 				B4972D5926FE53050084D489 /* Utils+Helpers */,
 				B4C4AB1626FE195600A74C12 /* Modules */,
 				B4C4AB1526FE194B00A74C12 /* Core */,
@@ -100,6 +169,9 @@
 		B4C4AB1726FE195F00A74C12 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4B7EC2A26FF1A9D00BD4DC5 /* DetalleListaMesesView */,
+				B4B7EC1A26FF06D300BD4DC5 /* HomeTabBarView */,
+				B4B7EC1526FF058500BD4DC5 /* CochesListaView */,
 				B4C4AB2126FE265800A74C12 /* ListaView */,
 			);
 			path = Sections;
@@ -111,6 +183,7 @@
 				B4C4AB2226FE266700A74C12 /* Cell */,
 				B4C4AB1826FE19E900A74C12 /* ListaMesesViewController.swift */,
 				B4C4AB1926FE19E900A74C12 /* ListaMesesViewController.xib */,
+				B4B7EC1F26FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift */,
 			);
 			path = ListaView;
 			sourceTree = "<group>";
@@ -181,9 +254,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B7EC2E26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib in Resources */,
 				B4C4AB0B26FE186400A74C12 /* LaunchScreen.storyboard in Resources */,
+				B4B7EC1E26FF070300BD4DC5 /* HomeTabBarViewController.xib in Resources */,
 				B4C4AB0826FE186400A74C12 /* Assets.xcassets in Resources */,
+				B4B7EC2526FF0F8C00BD4DC5 /* CochesCell.xib in Resources */,
 				B4C4AB1B26FE19E900A74C12 /* ListaMesesViewController.xib in Resources */,
+				B4B7EC1926FF05F100BD4DC5 /* ListaCochesViewController.xib in Resources */,
 				B4C4AB2626FE26AE00A74C12 /* MesesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,11 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B7EC2D26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift in Sources */,
+				B4B7EC1426FF03A200BD4DC5 /* CochesModel.swift in Sources */,
 				B4972D5B26FE533D0084D489 /* Utils.swift in Sources */,
 				B4C4AB1A26FE19E900A74C12 /* ListaMesesViewController.swift in Sources */,
 				B4C4AAFF26FE186300A74C12 /* AppDelegate.swift in Sources */,
+				B4B7EC2426FF0F8C00BD4DC5 /* CochesCell.swift in Sources */,
 				B4C4AB1E26FE1B1500A74C12 /* AppCoreCoordinator.swift in Sources */,
+				B4B7EC1D26FF070300BD4DC5 /* HomeTabBarViewController.swift in Sources */,
 				B4C4AB2526FE26AE00A74C12 /* MesesCell.swift in Sources */,
+				B4B7EC2926FF18DD00BD4DC5 /* ListaCochesCoordinator.swift in Sources */,
+				B4B7EC1726FF05BD00BD4DC5 /* ListaCochesViewController.swift in Sources */,
+				B4B7EC2026FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
