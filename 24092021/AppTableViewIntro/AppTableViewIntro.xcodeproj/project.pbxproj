@@ -19,6 +19,14 @@
 		B4B7EC2926FF18DD00BD4DC5 /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2826FF18DD00BD4DC5 /* ListaCochesCoordinator.swift */; };
 		B4B7EC2D26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2B26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift */; };
 		B4B7EC2E26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */; };
+		B4B7EC3026FF250200BD4DC5 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC2F26FF250200BD4DC5 /* HomeTabBarCoordinator.swift */; };
+		B4B7EC3426FF276700BD4DC5 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC3226FF276700BD4DC5 /* PerfilViewController.swift */; };
+		B4B7EC3526FF276700BD4DC5 /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC3326FF276700BD4DC5 /* PerfilViewController.xib */; };
+		B4B7EC3726FF27CE00BD4DC5 /* PerfilViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC3626FF27CE00BD4DC5 /* PerfilViewCoordinator.swift */; };
+		B4B7EC3B26FF2B8D00BD4DC5 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC3926FF2B8D00BD4DC5 /* PerfilCell.swift */; };
+		B4B7EC3C26FF2B8D00BD4DC5 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC3A26FF2B8D00BD4DC5 /* PerfilCell.xib */; };
+		B4B7EC3F26FF2BA500BD4DC5 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7EC3D26FF2BA500BD4DC5 /* PostsCell.swift */; };
+		B4B7EC4026FF2BA500BD4DC5 /* PostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B7EC3E26FF2BA500BD4DC5 /* PostsCell.xib */; };
 		B4C4AAFF26FE186300A74C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4AAFE26FE186300A74C12 /* AppDelegate.swift */; };
 		B4C4AB0826FE186400A74C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C4AB0726FE186400A74C12 /* Assets.xcassets */; };
 		B4C4AB0B26FE186400A74C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C4AB0926FE186400A74C12 /* LaunchScreen.storyboard */; };
@@ -27,6 +35,7 @@
 		B4C4AB1E26FE1B1500A74C12 /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4AB1D26FE1B1500A74C12 /* AppCoreCoordinator.swift */; };
 		B4C4AB2526FE26AE00A74C12 /* MesesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4AB2326FE26AE00A74C12 /* MesesCell.swift */; };
 		B4C4AB2626FE26AE00A74C12 /* MesesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C4AB2426FE26AE00A74C12 /* MesesCell.xib */; };
+		B4D0DA8227075F3E00C93936 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0DA8127075F3E00C93936 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +51,14 @@
 		B4B7EC2826FF18DD00BD4DC5 /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
 		B4B7EC2B26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLIstaMesesViewController.swift; sourceTree = "<group>"; };
 		B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleLIstaMesesViewController.xib; sourceTree = "<group>"; };
+		B4B7EC2F26FF250200BD4DC5 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		B4B7EC3226FF276700BD4DC5 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		B4B7EC3326FF276700BD4DC5 /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
+		B4B7EC3626FF27CE00BD4DC5 /* PerfilViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewCoordinator.swift; sourceTree = "<group>"; };
+		B4B7EC3926FF2B8D00BD4DC5 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
+		B4B7EC3A26FF2B8D00BD4DC5 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		B4B7EC3D26FF2BA500BD4DC5 /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
+		B4B7EC3E26FF2BA500BD4DC5 /* PostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsCell.xib; sourceTree = "<group>"; };
 		B4C4AAFB26FE186300A74C12 /* AppTableViewIntro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTableViewIntro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C4AAFE26FE186300A74C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C4AB0726FE186400A74C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +69,7 @@
 		B4C4AB1D26FE1B1500A74C12 /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
 		B4C4AB2326FE26AE00A74C12 /* MesesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesesCell.swift; sourceTree = "<group>"; };
 		B4C4AB2426FE26AE00A74C12 /* MesesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesesCell.xib; sourceTree = "<group>"; };
+		B4D0DA8127075F3E00C93936 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B4B7EC1326FF03A200BD4DC5 /* CochesModel.swift */,
+				B4D0DA8127075F3E00C93936 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +116,7 @@
 			children = (
 				B4B7EC1B26FF070300BD4DC5 /* HomeTabBarViewController.swift */,
 				B4B7EC1C26FF070300BD4DC5 /* HomeTabBarViewController.xib */,
+				B4B7EC2F26FF250200BD4DC5 /* HomeTabBarCoordinator.swift */,
 			);
 			path = HomeTabBarView;
 			sourceTree = "<group>";
@@ -117,6 +137,28 @@
 				B4B7EC2C26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib */,
 			);
 			path = DetalleListaMesesView;
+			sourceTree = "<group>";
+		};
+		B4B7EC3126FF275100BD4DC5 /* PerfilView */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC3826FF2B7200BD4DC5 /* Cell */,
+				B4B7EC3226FF276700BD4DC5 /* PerfilViewController.swift */,
+				B4B7EC3326FF276700BD4DC5 /* PerfilViewController.xib */,
+				B4B7EC3626FF27CE00BD4DC5 /* PerfilViewCoordinator.swift */,
+			);
+			path = PerfilView;
+			sourceTree = "<group>";
+		};
+		B4B7EC3826FF2B7200BD4DC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4B7EC3926FF2B8D00BD4DC5 /* PerfilCell.swift */,
+				B4B7EC3A26FF2B8D00BD4DC5 /* PerfilCell.xib */,
+				B4B7EC3D26FF2BA500BD4DC5 /* PostsCell.swift */,
+				B4B7EC3E26FF2BA500BD4DC5 /* PostsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B4C4AAF226FE186300A74C12 = {
@@ -169,6 +211,7 @@
 		B4C4AB1726FE195F00A74C12 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4B7EC3126FF275100BD4DC5 /* PerfilView */,
 				B4B7EC2A26FF1A9D00BD4DC5 /* DetalleListaMesesView */,
 				B4B7EC1A26FF06D300BD4DC5 /* HomeTabBarView */,
 				B4B7EC1526FF058500BD4DC5 /* CochesListaView */,
@@ -255,9 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B7EC2E26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.xib in Resources */,
+				B4B7EC3526FF276700BD4DC5 /* PerfilViewController.xib in Resources */,
+				B4B7EC4026FF2BA500BD4DC5 /* PostsCell.xib in Resources */,
 				B4C4AB0B26FE186400A74C12 /* LaunchScreen.storyboard in Resources */,
 				B4B7EC1E26FF070300BD4DC5 /* HomeTabBarViewController.xib in Resources */,
 				B4C4AB0826FE186400A74C12 /* Assets.xcassets in Resources */,
+				B4B7EC3C26FF2B8D00BD4DC5 /* PerfilCell.xib in Resources */,
 				B4B7EC2526FF0F8C00BD4DC5 /* CochesCell.xib in Resources */,
 				B4C4AB1B26FE19E900A74C12 /* ListaMesesViewController.xib in Resources */,
 				B4B7EC1926FF05F100BD4DC5 /* ListaCochesViewController.xib in Resources */,
@@ -272,17 +318,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B7EC3026FF250200BD4DC5 /* HomeTabBarCoordinator.swift in Sources */,
 				B4B7EC2D26FF1ABD00BD4DC5 /* DetalleLIstaMesesViewController.swift in Sources */,
 				B4B7EC1426FF03A200BD4DC5 /* CochesModel.swift in Sources */,
+				B4B7EC3726FF27CE00BD4DC5 /* PerfilViewCoordinator.swift in Sources */,
 				B4972D5B26FE533D0084D489 /* Utils.swift in Sources */,
 				B4C4AB1A26FE19E900A74C12 /* ListaMesesViewController.swift in Sources */,
+				B4B7EC3F26FF2BA500BD4DC5 /* PostsCell.swift in Sources */,
 				B4C4AAFF26FE186300A74C12 /* AppDelegate.swift in Sources */,
 				B4B7EC2426FF0F8C00BD4DC5 /* CochesCell.swift in Sources */,
 				B4C4AB1E26FE1B1500A74C12 /* AppCoreCoordinator.swift in Sources */,
 				B4B7EC1D26FF070300BD4DC5 /* HomeTabBarViewController.swift in Sources */,
 				B4C4AB2526FE26AE00A74C12 /* MesesCell.swift in Sources */,
+				B4D0DA8227075F3E00C93936 /* UserData.swift in Sources */,
 				B4B7EC2926FF18DD00BD4DC5 /* ListaCochesCoordinator.swift in Sources */,
 				B4B7EC1726FF05BD00BD4DC5 /* ListaCochesViewController.swift in Sources */,
+				B4B7EC3B26FF2B8D00BD4DC5 /* PerfilCell.swift in Sources */,
+				B4B7EC3426FF276700BD4DC5 /* PerfilViewController.swift in Sources */,
 				B4B7EC2026FF0C8F00BD4DC5 /* ListaMesesCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

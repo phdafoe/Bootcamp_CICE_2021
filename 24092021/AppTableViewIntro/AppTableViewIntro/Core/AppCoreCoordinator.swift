@@ -20,7 +20,7 @@ final class AppCoreCoordinator {
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     
     internal func setPrincipalViewController(in window: UIWindow) {
-        actualViewController = HomeTabBarViewController()
+        actualViewController = HomeTabBarCoordinator.tabBarCoordinator()
         window.rootViewController = actualViewController
         window.makeKeyAndVisible()
     }
