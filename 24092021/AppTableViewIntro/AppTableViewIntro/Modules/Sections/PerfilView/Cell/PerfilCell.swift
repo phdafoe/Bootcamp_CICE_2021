@@ -7,11 +7,22 @@
 
 import UIKit
 
+// Output
+protocol PerfilCellDelegate: AnyObject {
+    func muestraAlerta(_ cell: UITableViewCell, info userData: UserData)
+    func muestraPickerImageView(_ cell: UITableViewCell)
+    func navegaDetallePerfil(_ cell: UITableViewCell, info userData: UserData)
+}
+
+// Input
 protocol PerfilCellProtocol {
     func configuracionCell(data: UserData)
 }
 
 class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
+    
+    weak var delegate: PerfilCellDelegate?
+    var model: UserData?
     
     // MARK: - IBOutlets
     @IBOutlet weak var twiterLBL: UILabel!
@@ -26,19 +37,20 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
     
     // MARK: - IBActions
     @IBAction func muestraAlertaEmailACTION(_ sender: Any) {
-        
+        if let modelDes = self.model{
+            self.delegate?.muestraAlerta(self, info: modelDes)
+        }
     }
     
     @IBAction func editarImagenPerfilACTION(_ sender: Any) {
-        
-        
+        self.delegate?.muestraPickerImageView(self)
     }
     
     @IBAction func editarACTION(_ sender: Any) {
-        
-        
+        if let modelDes = self.model{
+            self.delegate?.navegaDetallePerfil(self, info: modelDes)
+        }
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -64,6 +76,7 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 extension PerfilCell: PerfilCellProtocol{
     
     func configuracionCell(data: UserData) {
+        self.model = data
         self.twiterLBL.text = data.usuarioTwitterPerfil
         self.perfilImagen.image = UIImage(named: data.imagenPerfil ?? "thor")
         self.perfilNombreLBL.text = data.nombrePerfil

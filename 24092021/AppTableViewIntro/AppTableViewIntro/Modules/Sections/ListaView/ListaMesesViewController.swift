@@ -53,7 +53,7 @@ extension ListaMesesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = arrayMeses[indexPath.row]
         let vc = DetalleLIstaMesesViewController()
-        vc.mesSeleccionado = model
+        vc.data = model
         self.show(vc, sender: nil)
         //self.present(vc, animated: true, completion: nil)
     }

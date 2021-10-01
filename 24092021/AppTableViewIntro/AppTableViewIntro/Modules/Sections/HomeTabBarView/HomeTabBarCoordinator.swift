@@ -16,7 +16,7 @@ final class HomeTabBarCoordinator{
         // controladores
         let listaMesesVC = ListaMesesCoordinator.navigation()
         let listaCochesVC = ListaCochesCoordinator.navigation()
-        let perfilVC = PerfilViewCoordinator.viewController()
+        let perfilVC = PerfilViewCoordinator.navigation()
         
         // Iconos de la Tab Bar quw corresponden a cada controlador
         let listaMesesItem = UITabBarItem(title: "Meses",

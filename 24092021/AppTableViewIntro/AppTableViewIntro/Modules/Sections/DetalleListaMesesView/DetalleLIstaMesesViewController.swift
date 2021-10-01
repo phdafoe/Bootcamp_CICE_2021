@@ -9,13 +9,13 @@ import UIKit
 
 class DetalleLIstaMesesViewController: UIViewController {
     
-    var mesSeleccionado: String?
+    var data: String?
     
     @IBOutlet weak var mesSeleccionadoLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mesSeleccionadoLBL.text = mesSeleccionado
+        self.mesSeleccionadoLBL.text = data
         // Do any additional setup after loading the view.
     }
 
