@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDataViewController" customModule="AppUserDefault" customModuleProvider="target">
             <connections>
+                <outlet property="apellidoTF" destination="9R7-Go-shd" id="Lw9-17-Tlo"/>
+                <outlet property="direccionTF" destination="Y6X-qa-EvQ" id="zqY-N3-74y"/>
+                <outlet property="fechaActualizacionLBL" destination="gWQ-xX-CHk" id="dVp-tx-Kk6"/>
+                <outlet property="imageImageView" destination="Nwh-Zz-hxO" id="H1H-ze-fZJ"/>
+                <outlet property="nombreTF" destination="69R-8d-17H" id="m9s-cb-aO5"/>
+                <outlet property="telefonoTF" destination="hL5-fr-yJT" id="CqJ-Mp-v6I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +33,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="Salvar información">
                         <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="salvarDatosACTION:" destination="-1" eventType="touchUpInside" id="eLA-EA-Say"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ll-w2-lSC">
                     <rect key="frame" x="208" y="105" width="179" height="32"/>
@@ -37,6 +46,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="Actualiza información">
                         <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="recuperarDatosACTION:" destination="-1" eventType="touchUpInside" id="AaP-Wn-9mP"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69R-8d-17H">
                     <rect key="frame" x="27" y="161" width="360" height="34"/>
@@ -62,12 +74,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-Zz-hxO">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-Zz-hxO">
                     <rect key="frame" x="27" y="380" width="360" height="276"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de actualización" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWQ-xX-CHk">
-                    <rect key="frame" x="27" y="675" width="360" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de actualización" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWQ-xX-CHk">
+                    <rect key="frame" x="27" y="675" width="360" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -80,6 +92,7 @@
         </view>
     </objects>
     <resources>
+        <image name="placeholder" width="1280" height="800"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

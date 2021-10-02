@@ -14,6 +14,19 @@
 		B48A0C5E27083F9A000D726C /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A0C5C27083F9A000D726C /* UserDataViewController.swift */; };
 		B48A0C5F27083F9A000D726C /* UserDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48A0C5D27083F9A000D726C /* UserDataViewController.xib */; };
 		B48A0C6127083FAC000D726C /* UserDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A0C6027083FAC000D726C /* UserDataCoordinator.swift */; };
+		B48A0C64270847F1000D726C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A0C63270847F0000D726C /* Utils.swift */; };
+		B4F1A83C2708668000E3949B /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A83A2708668000E3949B /* HomeTabBarViewController.swift */; };
+		B4F1A83D2708668000E3949B /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F1A83B2708668000E3949B /* HomeTabBarViewController.xib */; };
+		B4F1A83F2708669300E3949B /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A83E2708669300E3949B /* HomeTabBarCoordinator.swift */; };
+		B4F1A84327086FC800E3949B /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A84127086FC800E3949B /* PerfilViewController.swift */; };
+		B4F1A84427086FC800E3949B /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F1A84227086FC800E3949B /* PerfilViewController.xib */; };
+		B4F1A84627086FD800E3949B /* PerfilViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A84527086FD800E3949B /* PerfilViewCoordinator.swift */; };
+		B4F1A84A2708742C00E3949B /* MeseCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A8482708742C00E3949B /* MeseCochesViewController.swift */; };
+		B4F1A84B2708742C00E3949B /* MeseCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F1A8492708742C00E3949B /* MeseCochesViewController.xib */; };
+		B4F1A84F2708744500E3949B /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A84D2708744500E3949B /* PostsViewController.swift */; };
+		B4F1A8502708744500E3949B /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F1A84E2708744500E3949B /* PostsViewController.xib */; };
+		B4F1A8522708745500E3949B /* MeseCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A8512708745500E3949B /* MeseCochesCoordinator.swift */; };
+		B4F1A8542708746400E3949B /* PostsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A8532708746400E3949B /* PostsViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,19 @@
 		B48A0C5C27083F9A000D726C /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		B48A0C5D27083F9A000D726C /* UserDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDataViewController.xib; sourceTree = "<group>"; };
 		B48A0C6027083FAC000D726C /* UserDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCoordinator.swift; sourceTree = "<group>"; };
+		B48A0C63270847F0000D726C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B4F1A83A2708668000E3949B /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B4F1A83B2708668000E3949B /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B4F1A83E2708669300E3949B /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		B4F1A84127086FC800E3949B /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		B4F1A84227086FC800E3949B /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
+		B4F1A84527086FD800E3949B /* PerfilViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewCoordinator.swift; sourceTree = "<group>"; };
+		B4F1A8482708742C00E3949B /* MeseCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeseCochesViewController.swift; sourceTree = "<group>"; };
+		B4F1A8492708742C00E3949B /* MeseCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeseCochesViewController.xib; sourceTree = "<group>"; };
+		B4F1A84D2708744500E3949B /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		B4F1A84E2708744500E3949B /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
+		B4F1A8512708745500E3949B /* MeseCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeseCochesCoordinator.swift; sourceTree = "<group>"; };
+		B4F1A8532708746400E3949B /* PostsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 		B48A0C4227083D8A000D726C /* AppUserDefault */ = {
 			isa = PBXGroup;
 			children = (
+				B48A0C62270847DC000D726C /* Utils+Helpers */,
 				B48A0C5A27083F5B000D726C /* Modules */,
 				B48A0C5727083E81000D726C /* Core */,
 				B48A0C4C27083D8D000D726C /* Assets.xcassets */,
@@ -87,11 +114,71 @@
 		B48A0C5B27083F65000D726C /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4F1A84C2708743100E3949B /* PostsView */,
+				B4F1A8472708741900E3949B /* MeseCochesView */,
+				B4F1A84027086F9E00E3949B /* PerfilView */,
+				B4F1A8392708664C00E3949B /* HomeTabBarView */,
+				B4F1A8382708662400E3949B /* RegistroView */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		B48A0C62270847DC000D726C /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B48A0C63270847F0000D726C /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		B4F1A8382708662400E3949B /* RegistroView */ = {
+			isa = PBXGroup;
+			children = (
 				B48A0C5C27083F9A000D726C /* UserDataViewController.swift */,
 				B48A0C5D27083F9A000D726C /* UserDataViewController.xib */,
 				B48A0C6027083FAC000D726C /* UserDataCoordinator.swift */,
 			);
-			path = Sections;
+			path = RegistroView;
+			sourceTree = "<group>";
+		};
+		B4F1A8392708664C00E3949B /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F1A83A2708668000E3949B /* HomeTabBarViewController.swift */,
+				B4F1A83B2708668000E3949B /* HomeTabBarViewController.xib */,
+				B4F1A83E2708669300E3949B /* HomeTabBarCoordinator.swift */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		B4F1A84027086F9E00E3949B /* PerfilView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F1A84127086FC800E3949B /* PerfilViewController.swift */,
+				B4F1A84227086FC800E3949B /* PerfilViewController.xib */,
+				B4F1A84527086FD800E3949B /* PerfilViewCoordinator.swift */,
+			);
+			path = PerfilView;
+			sourceTree = "<group>";
+		};
+		B4F1A8472708741900E3949B /* MeseCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F1A8482708742C00E3949B /* MeseCochesViewController.swift */,
+				B4F1A8492708742C00E3949B /* MeseCochesViewController.xib */,
+				B4F1A8512708745500E3949B /* MeseCochesCoordinator.swift */,
+			);
+			path = MeseCochesView;
+			sourceTree = "<group>";
+		};
+		B4F1A84C2708743100E3949B /* PostsView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F1A84D2708744500E3949B /* PostsViewController.swift */,
+				B4F1A84E2708744500E3949B /* PostsViewController.xib */,
+				B4F1A8532708746400E3949B /* PostsViewCoordinator.swift */,
+			);
+			path = PostsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48A0C5F27083F9A000D726C /* UserDataViewController.xib in Resources */,
+				B4F1A84427086FC800E3949B /* PerfilViewController.xib in Resources */,
+				B4F1A83D2708668000E3949B /* HomeTabBarViewController.xib in Resources */,
+				B4F1A84B2708742C00E3949B /* MeseCochesViewController.xib in Resources */,
 				B48A0C5027083D8D000D726C /* LaunchScreen.storyboard in Resources */,
+				B4F1A8502708744500E3949B /* PostsViewController.xib in Resources */,
 				B48A0C4D27083D8D000D726C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,10 +256,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F1A83F2708669300E3949B /* HomeTabBarCoordinator.swift in Sources */,
+				B48A0C64270847F1000D726C /* Utils.swift in Sources */,
 				B48A0C5E27083F9A000D726C /* UserDataViewController.swift in Sources */,
 				B48A0C6127083FAC000D726C /* UserDataCoordinator.swift in Sources */,
+				B4F1A83C2708668000E3949B /* HomeTabBarViewController.swift in Sources */,
+				B4F1A84F2708744500E3949B /* PostsViewController.swift in Sources */,
 				B48A0C4427083D8A000D726C /* AppDelegate.swift in Sources */,
+				B4F1A84627086FD800E3949B /* PerfilViewCoordinator.swift in Sources */,
+				B4F1A84327086FC800E3949B /* PerfilViewController.swift in Sources */,
+				B4F1A8542708746400E3949B /* PostsViewCoordinator.swift in Sources */,
+				B4F1A8522708745500E3949B /* MeseCochesCoordinator.swift in Sources */,
 				B48A0C5927083E9A000D726C /* AppCoreCoordinator.swift in Sources */,
+				B4F1A84A2708742C00E3949B /* MeseCochesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

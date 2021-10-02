@@ -21,9 +21,20 @@ final class AppCoreCoordinator {
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol{
     
     func initialApplication(whit window: UIWindow) {
-        self.actualVC = UserDataCoordinator.navigation()
+        self.muestraRutaUserdefault()
+        
+        if !Utils.Constantes().kPrefs.bool(forKey: Utils.Constantes().kUsuarioLogado) {
+            self.actualVC = UserDataCoordinator.viewController()
+        } else {
+            self.actualVC = HomeTabBarCoordinator.homeTabBarVC()
+        }
+        
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
+    }
+    
+    private func muestraRutaUserdefault(){
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
     }
     
     
