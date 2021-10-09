@@ -29,6 +29,13 @@
 		B44C16BE27109B2E006B4272 /* NuevaTareaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44C16BD27109B2E006B4272 /* NuevaTareaCoordinator.swift */; };
 		B44C16C12710A453006B4272 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = B44C16C02710A453006B4272 /* contacts.json */; };
 		B44C16C42710A592006B4272 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44C16C32710A592006B4272 /* ContactosServerModel.swift */; };
+		B44C16C82710B197006B4272 /* ContactosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44C16C62710B197006B4272 /* ContactosCell.swift */; };
+		B44C16C92710B197006B4272 /* ContactosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44C16C72710B197006B4272 /* ContactosCell.xib */; };
+		B4F66B232710BCA000FE07FB /* DetalleContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B212710BCA000FE07FB /* DetalleContactoViewController.swift */; };
+		B4F66B242710BCA000FE07FB /* DetalleContactoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F66B222710BCA000FE07FB /* DetalleContactoViewController.xib */; };
+		B4F66B262710BCC300FE07FB /* DetalleContactoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B252710BCC300FE07FB /* DetalleContactoCoordinator.swift */; };
+		B4F66B2A2710BFAB00FE07FB /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B282710BFAB00FE07FB /* PerfilCell.swift */; };
+		B4F66B2B2710BFAB00FE07FB /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F66B292710BFAB00FE07FB /* PerfilCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		B44C16BD27109B2E006B4272 /* NuevaTareaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaTareaCoordinator.swift; sourceTree = "<group>"; };
 		B44C16C02710A453006B4272 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		B44C16C32710A592006B4272 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
+		B44C16C62710B197006B4272 /* ContactosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosCell.swift; sourceTree = "<group>"; };
+		B44C16C72710B197006B4272 /* ContactosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosCell.xib; sourceTree = "<group>"; };
+		B4F66B212710BCA000FE07FB /* DetalleContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoViewController.swift; sourceTree = "<group>"; };
+		B4F66B222710BCA000FE07FB /* DetalleContactoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleContactoViewController.xib; sourceTree = "<group>"; };
+		B4F66B252710BCC300FE07FB /* DetalleContactoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoCoordinator.swift; sourceTree = "<group>"; };
+		B4F66B282710BFAB00FE07FB /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
+		B4F66B292710BFAB00FE07FB /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +134,7 @@
 		B44C169627108970006B4272 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4F66B202710BC7000FE07FB /* DetalleContactoView */,
 				B44C16B427109A53006B4272 /* NuevaTareaView */,
 				B44C16AF27109A01006B4272 /* ListaTareasView */,
 				B44C16AA271099C1006B4272 /* ContactosView */,
@@ -160,6 +175,7 @@
 		B44C16AA271099C1006B4272 /* ContactosView */ = {
 			isa = PBXGroup;
 			children = (
+				B44C16C52710B14D006B4272 /* Cell */,
 				B44C16AB271099F3006B4272 /* ContactosViewController.swift */,
 				B44C16AC271099F3006B4272 /* ContactosViewController.xib */,
 				B44C16B927109ABD006B4272 /* ContactosViewCoordinator.swift */,
@@ -201,6 +217,35 @@
 				B44C16C32710A592006B4272 /* ContactosServerModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B44C16C52710B14D006B4272 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B44C16C62710B197006B4272 /* ContactosCell.swift */,
+				B44C16C72710B197006B4272 /* ContactosCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B4F66B202710BC7000FE07FB /* DetalleContactoView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F66B272710BF6600FE07FB /* Cell */,
+				B4F66B212710BCA000FE07FB /* DetalleContactoViewController.swift */,
+				B4F66B222710BCA000FE07FB /* DetalleContactoViewController.xib */,
+				B4F66B252710BCC300FE07FB /* DetalleContactoCoordinator.swift */,
+			);
+			path = DetalleContactoView;
+			sourceTree = "<group>";
+		};
+		B4F66B272710BF6600FE07FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4F66B282710BFAB00FE07FB /* PerfilCell.swift */,
+				B4F66B292710BFAB00FE07FB /* PerfilCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +308,13 @@
 			files = (
 				B44C168D271088D5006B4272 /* LaunchScreen.storyboard in Resources */,
 				B44C16B827109A6B006B4272 /* NuevaTareaViewController.xib in Resources */,
+				B44C16C92710B197006B4272 /* ContactosCell.xib in Resources */,
 				B44C16A72710992C006B4272 /* HomeTabBarViewController.xib in Resources */,
 				B44C16AE271099F3006B4272 /* ContactosViewController.xib in Resources */,
 				B44C16C12710A453006B4272 /* contacts.json in Resources */,
 				B44C168A271088D5006B4272 /* Assets.xcassets in Resources */,
+				B4F66B2B2710BFAB00FE07FB /* PerfilCell.xib in Resources */,
+				B4F66B242710BCA000FE07FB /* DetalleContactoViewController.xib in Resources */,
 				B44C16B327109A46006B4272 /* ListaTareasViewController.xib in Resources */,
 				B44C169A271089A2006B4272 /* LoginViewController.xib in Resources */,
 			);
@@ -280,15 +328,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44C16BC27109B00006B4272 /* ListaTareasCoordinator.swift in Sources */,
+				B4F66B2A2710BFAB00FE07FB /* PerfilCell.swift in Sources */,
 				B44C16B727109A6B006B4272 /* NuevaTareaViewController.swift in Sources */,
 				B44C16A92710994C006B4272 /* HomeTabBarCoordinator.swift in Sources */,
 				B44C1699271089A2006B4272 /* LoginViewController.swift in Sources */,
+				B44C16C82710B197006B4272 /* ContactosCell.swift in Sources */,
 				B44C16BA27109ABD006B4272 /* ContactosViewCoordinator.swift in Sources */,
 				B44C169F27108C31006B4272 /* AppCoreCoordinator.swift in Sources */,
 				B44C16A22710906A006B4272 /* Utils+Helpers.swift in Sources */,
 				B44C16A62710992C006B4272 /* HomeTabBarViewController.swift in Sources */,
 				B44C16AD271099F3006B4272 /* ContactosViewController.swift in Sources */,
+				B4F66B262710BCC300FE07FB /* DetalleContactoCoordinator.swift in Sources */,
 				B44C169D27108AEE006B4272 /* LoginViewCoordinator.swift in Sources */,
+				B4F66B232710BCA000FE07FB /* DetalleContactoViewController.swift in Sources */,
 				B44C16B227109A46006B4272 /* ListaTareasViewController.swift in Sources */,
 				B44C16BE27109B2E006B4272 /* NuevaTareaCoordinator.swift in Sources */,
 				B44C1681271088D2006B4272 /* AppDelegate.swift in Sources */,

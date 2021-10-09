@@ -29,6 +29,7 @@ class ContactosViewController: UIViewController {
     private func configuracionTV(){
         self.contactosTableView.delegate = self
         self.contactosTableView.dataSource = self
+        self.contactosTableView.register(UINib(nibName: ContactosCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: ContactosCell.defaultReuseIdentifier)
     }
 
 }
@@ -40,8 +41,23 @@ extension ContactosViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let contactosCell = self.contactosTableView.dequeueReusableCell(withIdentifier: ContactosCell.defaultReuseIdentifier, for: indexPath) as! ContactosCell
+        
+        contactosCell.configuracionCelada(data: self.arrayContactos[indexPath.row])
+        
+        return contactosCell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let model = self.arrayContactos[indexPath.row]
+        let vc = DetalleContactoCoordinator.viewController(dvo: model)
+        self.show(vc, sender: nil)
+    }
     
 }
