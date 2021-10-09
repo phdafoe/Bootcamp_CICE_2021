@@ -36,6 +36,10 @@
 		B4F66B262710BCC300FE07FB /* DetalleContactoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B252710BCC300FE07FB /* DetalleContactoCoordinator.swift */; };
 		B4F66B2A2710BFAB00FE07FB /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B282710BFAB00FE07FB /* PerfilCell.swift */; };
 		B4F66B2B2710BFAB00FE07FB /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F66B292710BFAB00FE07FB /* PerfilCell.xib */; };
+		B4F66B2F2711826400FE07FB /* CategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B2D2711826400FE07FB /* CategoriaViewController.swift */; };
+		B4F66B302711826400FE07FB /* CategoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F66B2E2711826400FE07FB /* CategoriaViewController.xib */; };
+		B4F66B322711827E00FE07FB /* CategoriaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B312711827E00FE07FB /* CategoriaCoordinator.swift */; };
+		B4F66B3427118C0500FE07FB /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66B3327118C0500FE07FB /* TaskModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,10 @@
 		B4F66B252710BCC300FE07FB /* DetalleContactoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoCoordinator.swift; sourceTree = "<group>"; };
 		B4F66B282710BFAB00FE07FB /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
 		B4F66B292710BFAB00FE07FB /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		B4F66B2D2711826400FE07FB /* CategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewController.swift; sourceTree = "<group>"; };
+		B4F66B2E2711826400FE07FB /* CategoriaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriaViewController.xib; sourceTree = "<group>"; };
+		B4F66B312711827E00FE07FB /* CategoriaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaCoordinator.swift; sourceTree = "<group>"; };
+		B4F66B3327118C0500FE07FB /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 		B44C169627108970006B4272 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4F66B2C2711824100FE07FB /* CategoriaView */,
 				B4F66B202710BC7000FE07FB /* DetalleContactoView */,
 				B44C16B427109A53006B4272 /* NuevaTareaView */,
 				B44C16AF27109A01006B4272 /* ListaTareasView */,
@@ -215,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				B44C16C32710A592006B4272 /* ContactosServerModel.swift */,
+				B4F66B3327118C0500FE07FB /* TaskModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +256,16 @@
 				B4F66B292710BFAB00FE07FB /* PerfilCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B4F66B2C2711824100FE07FB /* CategoriaView */ = {
+			isa = PBXGroup;
+			children = (
+				B4F66B2D2711826400FE07FB /* CategoriaViewController.swift */,
+				B4F66B2E2711826400FE07FB /* CategoriaViewController.xib */,
+				B4F66B312711827E00FE07FB /* CategoriaCoordinator.swift */,
+			);
+			path = CategoriaView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +336,7 @@
 				B4F66B2B2710BFAB00FE07FB /* PerfilCell.xib in Resources */,
 				B4F66B242710BCA000FE07FB /* DetalleContactoViewController.xib in Resources */,
 				B44C16B327109A46006B4272 /* ListaTareasViewController.xib in Resources */,
+				B4F66B302711826400FE07FB /* CategoriaViewController.xib in Resources */,
 				B44C169A271089A2006B4272 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,8 +354,10 @@
 				B44C16A92710994C006B4272 /* HomeTabBarCoordinator.swift in Sources */,
 				B44C1699271089A2006B4272 /* LoginViewController.swift in Sources */,
 				B44C16C82710B197006B4272 /* ContactosCell.swift in Sources */,
+				B4F66B3427118C0500FE07FB /* TaskModel.swift in Sources */,
 				B44C16BA27109ABD006B4272 /* ContactosViewCoordinator.swift in Sources */,
 				B44C169F27108C31006B4272 /* AppCoreCoordinator.swift in Sources */,
+				B4F66B322711827E00FE07FB /* CategoriaCoordinator.swift in Sources */,
 				B44C16A22710906A006B4272 /* Utils+Helpers.swift in Sources */,
 				B44C16A62710992C006B4272 /* HomeTabBarViewController.swift in Sources */,
 				B44C16AD271099F3006B4272 /* ContactosViewController.swift in Sources */,
@@ -345,6 +368,7 @@
 				B44C16BE27109B2E006B4272 /* NuevaTareaCoordinator.swift in Sources */,
 				B44C1681271088D2006B4272 /* AppDelegate.swift in Sources */,
 				B44C16C42710A592006B4272 /* ContactosServerModel.swift in Sources */,
+				B4F66B2F2711826400FE07FB /* CategoriaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

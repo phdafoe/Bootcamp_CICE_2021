@@ -58,7 +58,7 @@ extension ContactosServerModel {
         var arrayContactos: [ArrayContact] = []
         do {
             let response: ContactosServerModel? = try Bundle.main.loadAndDecodeJSON(filename: "contacts")
-            arrayContactos =  response?.arrayContacts ?? []
+            arrayContactos = response?.arrayContacts ?? []
         }catch let error{
             debugPrint(error.localizedDescription)
         }

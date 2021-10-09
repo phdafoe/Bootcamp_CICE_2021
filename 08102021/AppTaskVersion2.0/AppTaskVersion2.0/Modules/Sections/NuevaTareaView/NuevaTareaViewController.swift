@@ -8,7 +8,35 @@
 import UIKit
 
 class NuevaTareaViewController: UIViewController {
-
+    
+    // MARK: - Variables
+    let arrayPrioridad = ["ALTA", "MEDIA - ALTA", "MEDIA", "MEDIA - BAJA", "BAJA"]
+    let nombreCategoria = "Sin Categoría"
+    var fotoSeleccionada = false
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var nuevaTareaTF: UITextField!
+    @IBOutlet weak var prioridadTF: UITextField!
+    @IBOutlet weak var fechaTF: UITextField!
+    @IBOutlet weak var categoriaLBL: UILabel!
+    @IBOutlet weak var descripcionTextV: UITextView!
+    @IBOutlet weak var imagenTareaImage: UIImageView!
+    
+    // MARK: - IBActions
+    @IBAction func muestraCamaraACTION(_ sender: Any) {
+        
+    }
+    
+    @IBAction func muestraListaCategoría(_ sender: Any) {
+        
+    }
+    
+    @IBAction func salvarTareUserDeACTION(_ sender: Any) {
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +44,7 @@ class NuevaTareaViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - Metodos privados
+    
+    
 }

@@ -44,3 +44,29 @@ extension ReuseIdentifierViewControllerProtocol where Self: UIViewController {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 }
+
+extension UINavigationBar {
+    
+    func setNavigationBarAppearance(backgroundColor: UIColor = .white,
+                                   titleTextAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: "helvetica", size: 17)!],
+                                   backIndicatorImage: UIImage = UIImage(systemName: "chevron.left") ?? UIImage(),
+                                   itemTintColor: UIColor = UIColor.black) {
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = backgroundColor
+            appearance.titleTextAttributes = titleTextAttributes
+            appearance.shadowColor = .clear
+            appearance.setBackIndicatorImage(backIndicatorImage, transitionMaskImage: backIndicatorImage)
+            tintColor = itemTintColor
+            standardAppearance = appearance
+            compactAppearance = appearance
+            scrollEdgeAppearance = appearance
+        } else {
+            
+        }
+        
+        
+    }
+    
+}

@@ -22,6 +22,7 @@ class ContactosViewController: UIViewController {
     }
 
     private func alimentaArrayContactos() {
+        self.title = "Contactos"
         self.arrayContactos = ContactosServerModel.stubbedContactos
         self.configuracionTV()
     }

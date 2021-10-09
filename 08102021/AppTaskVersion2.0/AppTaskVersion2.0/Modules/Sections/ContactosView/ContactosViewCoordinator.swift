@@ -11,7 +11,9 @@ import UIKit
 final class ContactosViewCoordinator {
     
     static func navigation() -> UINavigationController {
-        UINavigationController(rootViewController: viewController())
+        let navVC = UINavigationController(rootViewController: viewController())
+        navVC.navigationBar.setNavigationBarAppearance()
+        return navVC
     }
     
     static func viewController() -> UIViewController {
