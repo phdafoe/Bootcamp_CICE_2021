@@ -24,6 +24,8 @@ extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     
     internal func initialViewController(in window: UIWindow) {
         
+        self.localNotificationSetup()
+        
         if Utils.Constantes().kPreferences.bool(forKey: Utils.Constantes().kUsuarioLogado) {
             self.actualVC = HomeTabBarCoordinator.viewController()
         } else {
@@ -32,5 +34,14 @@ extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
 
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
+    }
+    
+    private func localNotificationSetup() {
+        // Solicitamos al usuario que necesitamos enviarle notificaciones
+        if UIApplication.instancesRespond(to: #selector(UIApplication.registerUserNotificationSettings(_:))) {
+            let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound],
+                                                     categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(setting)
+        }
     }
 }

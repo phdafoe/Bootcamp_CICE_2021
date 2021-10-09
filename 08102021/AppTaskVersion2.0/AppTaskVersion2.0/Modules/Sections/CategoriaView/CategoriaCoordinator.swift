@@ -10,8 +10,10 @@ import UIKit
 
 final class CategoriaCoordinator {
     
-    static func viewController() -> UIViewController {
-        CategoriaViewController()
+    static func viewController(delegate: CategoriaViewControllerOutputDelegate) -> UIViewController {
+        let vc = CategoriaViewController()
+        vc.delegateOutput = delegate
+        return vc
     }
     
 }
