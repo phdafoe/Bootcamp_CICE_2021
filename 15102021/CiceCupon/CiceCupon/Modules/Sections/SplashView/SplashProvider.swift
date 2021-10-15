@@ -19,8 +19,8 @@ final class SplashProvider: SplashProviderProtocol {
     func fetchData(completionHandler: @escaping (Result<MusicServerModel, NetworkError>) -> (),
                    failure: @escaping (NetworkError) -> ()) {
         
-        networkService.requestGeneric(requestObject: SplashProviderRequest.requestData(data: "\(10)"),
-                                      entityClass: MusicServerModel.self) { [weak self] musicServerModel in
+        self.networkService.requestGeneric(requestObject: SplashProviderRequest.requestData(data: "\(10)"),
+                                           entityClass: MusicServerModel.self) { [weak self] musicServerModel in
             guard self != nil else { return }
             if let musicServerModelDes = musicServerModel{
                 completionHandler(.success(musicServerModelDes))
@@ -31,8 +31,6 @@ final class SplashProvider: SplashProviderProtocol {
         }
 
     }
-    
-    
 }
 
 struct SplashProviderRequest {

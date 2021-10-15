@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SplashViewControllerProtocol {
-    
+    func refreshView()
 }
 
 class SplashViewController: BaseView<SplashPresenterInputProtocol> {
@@ -19,10 +19,14 @@ class SplashViewController: BaseView<SplashPresenterInputProtocol> {
         // Do any additional setup after loading the view.
     }
 
-
-
 }
 
 extension SplashViewController: SplashViewControllerProtocol{
+    
+    func refreshView() {
+        let aux = self.presenter?.getInformationObject()
+        debugPrint(aux!)
+    }
+    
     
 }

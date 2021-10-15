@@ -25,7 +25,6 @@ class BasePresenter<V, I, R> {
         self.interactor = interactor
         self.router = router
     }
-    
 }
 
 class BaseInteractor<P> {

@@ -15,7 +15,6 @@ protocol AppCoreCoordinatorProtocol {
 
 final class AppCoreCoordinator {
     var actualVC = UIViewController()
-    
 }
 
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
