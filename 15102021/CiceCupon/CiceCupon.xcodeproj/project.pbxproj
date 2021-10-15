@@ -19,6 +19,10 @@
 		B4CBDD782719CC0600270887 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD772719CC0600270887 /* SplashCoordinator.swift */; };
 		B4CBDD7A2719CCA600270887 /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD792719CCA600270887 /* SplashProvider.swift */; };
 		B4CBDD7C2719D64A00270887 /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD7B2719D64A00270887 /* AppCoreCoordinator.swift */; };
+		B4CBDD7F2719D9ED00270887 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD7E2719D9ED00270887 /* NetworkService.swift */; };
+		B4CBDD812719DBBA00270887 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD802719DBBA00270887 /* NetworkError.swift */; };
+		B4CBDD842719DC6B00270887 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD832719DC6B00270887 /* Utils.swift */; };
+		B4CBDD872719E9AF00270887 /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD862719E9AF00270887 /* MusicServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		B4CBDD772719CC0600270887 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		B4CBDD792719CCA600270887 /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
 		B4CBDD7B2719D64A00270887 /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
+		B4CBDD7E2719D9ED00270887 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B4CBDD802719DBBA00270887 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B4CBDD832719DC6B00270887 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B4CBDD862719E9AF00270887 /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,8 @@
 		B4CBDD512719C77800270887 /* CiceCupon */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBDD822719DC5400270887 /* Utils+Helpers */,
+				B4CBDD7D2719D9BB00270887 /* NetworkService */,
 				B4CBDD6A2719CB5B00270887 /* Modules */,
 				B4CBDD672719C7E100270887 /* BaseVIPER */,
 				B4CBDD662719C78C00270887 /* Core */,
@@ -114,6 +124,7 @@
 		B4CBDD6C2719CB6D00270887 /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBDD852719E99D00270887 /* Models */,
 				B4CBDD6D2719CB9C00270887 /* SplashViewController.swift */,
 				B4CBDD6E2719CB9C00270887 /* SplashViewController.xib */,
 				B4CBDD712719CBC300270887 /* SplashPresenter.swift */,
@@ -123,6 +134,31 @@
 				B4CBDD792719CCA600270887 /* SplashProvider.swift */,
 			);
 			path = SplashView;
+			sourceTree = "<group>";
+		};
+		B4CBDD7D2719D9BB00270887 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBDD7E2719D9ED00270887 /* NetworkService.swift */,
+				B4CBDD802719DBBA00270887 /* NetworkError.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		B4CBDD822719DC5400270887 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBDD832719DC6B00270887 /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		B4CBDD852719E99D00270887 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBDD862719E9AF00270887 /* MusicServerModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBDD872719E9AF00270887 /* MusicServerModel.swift in Sources */,
+				B4CBDD7F2719D9ED00270887 /* NetworkService.swift in Sources */,
 				B4CBDD6F2719CB9C00270887 /* SplashViewController.swift in Sources */,
 				B4CBDD762719CBE700270887 /* SplashRouter.swift in Sources */,
 				B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */,
@@ -204,7 +242,9 @@
 				B4CBDD7A2719CCA600270887 /* SplashProvider.swift in Sources */,
 				B4CBDD692719C7FD00270887 /* BaseVIPER.swift in Sources */,
 				B4CBDD722719CBC300270887 /* SplashPresenter.swift in Sources */,
+				B4CBDD812719DBBA00270887 /* NetworkError.swift in Sources */,
 				B4CBDD7C2719D64A00270887 /* AppCoreCoordinator.swift in Sources */,
+				B4CBDD842719DC6B00270887 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

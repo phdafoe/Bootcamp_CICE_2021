@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SplashPresenterInputProtocol {
-    
+    func fetchData()
 }
 
 protocol SplashInteractorOutputProtocol {
@@ -20,6 +20,10 @@ final class SplashPresenter: BasePresenter<SplashViewControllerProtocol, SplashI
 }
 
 extension SplashPresenter: SplashPresenterInputProtocol {
+    func fetchData() {
+        self.interactor?.fetchDataMusic()
+    }
+    
     
 }
 
