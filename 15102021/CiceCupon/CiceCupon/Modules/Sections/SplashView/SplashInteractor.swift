@@ -13,7 +13,9 @@ protocol SplashInteractorInputProtocol {
 }
 
 final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
+    
     let provider: SplashProviderProtocol = SplashProvider()
+    
 }
 
 // extension que aplica la ejecución del metodos que entran desde el Presenter
@@ -27,9 +29,6 @@ extension SplashInteractor: SplashInteractorInputProtocol{
             case .failure(let error):
                 debugPrint(error)
             }
-        } failure: { networkError in
-            debugPrint(networkError.localizedDescription)
         }
-
     }
 }

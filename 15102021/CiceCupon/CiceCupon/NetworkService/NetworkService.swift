@@ -11,7 +11,7 @@ protocol NetworkServiceProtocol {
     
     func requestGeneric<M: Decodable>(requestObject: RequestDTO,
                                       entityClass: M.Type,
-                                      completionHandler: @escaping (M?) -> (),
+                                      success: @escaping (M?) -> (),
                                       failure: @escaping (NetworkError) -> ())
 }
 
@@ -20,7 +20,7 @@ final class NetworkService: NetworkServiceProtocol {
     
     func requestGeneric<M>(requestObject: RequestDTO,
                            entityClass: M.Type,
-                           completionHandler: @escaping (M?) -> (),
+                           success: @escaping (M?) -> (),
                            failure: @escaping (NetworkError) -> ()) where M : Decodable {
         
         let sessionConfig = URLSessionConfiguration.default
@@ -51,7 +51,7 @@ final class NetworkService: NetworkServiceProtocol {
             
             do {
                 let jsonObject = try JSONDecoder().decode(entityClass.self, from: dataDes)
-                completionHandler(jsonObject)
+                success(jsonObject)
             } catch {
                 failure(NetworkError(status: .resourceUnavailable))
             }

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B445FA2C271AB896006749E1 /* CiceCuponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B445FA2B271AB896006749E1 /* CiceCuponTests.swift */; };
+		B445FA35271AB945006749E1 /* SplashPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B445FA34271AB945006749E1 /* SplashPresenterTest.swift */; };
+		B4CBAB45271AC88100C737BF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB3E271AC88100C737BF /* LoginViewController.xib */; };
+		B4CBAB46271AC88100C737BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB3F271AC88100C737BF /* LoginViewController.swift */; };
+		B4CBAB47271AC88100C737BF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB40271AC88100C737BF /* LoginRouter.swift */; };
+		B4CBAB48271AC88100C737BF /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB41271AC88100C737BF /* LoginProvider.swift */; };
+		B4CBAB49271AC88100C737BF /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB42271AC88100C737BF /* LoginCoordinator.swift */; };
+		B4CBAB4A271AC88100C737BF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB43271AC88100C737BF /* LoginPresenter.swift */; };
+		B4CBAB4B271AC88100C737BF /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB44271AC88100C737BF /* LoginInteractor.swift */; };
 		B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD522719C77800270887 /* AppDelegate.swift */; };
 		B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5B2719C77B00270887 /* Assets.xcassets */; };
 		B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5D2719C77B00270887 /* LaunchScreen.storyboard */; };
@@ -25,7 +34,27 @@
 		B4CBDD872719E9AF00270887 /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD862719E9AF00270887 /* MusicServerModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B445FA2D271AB896006749E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CBDD472719C77800270887 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4CBDD4E2719C77800270887;
+			remoteInfo = CiceCupon;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B445FA29271AB896006749E1 /* CiceCuponTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiceCuponTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B445FA2B271AB896006749E1 /* CiceCuponTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiceCuponTests.swift; sourceTree = "<group>"; };
+		B445FA34271AB945006749E1 /* SplashPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTest.swift; sourceTree = "<group>"; };
+		B4CBAB3E271AC88100C737BF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B4CBAB3F271AC88100C737BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B4CBAB40271AC88100C737BF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		B4CBAB41271AC88100C737BF /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		B4CBAB42271AC88100C737BF /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		B4CBAB43271AC88100C737BF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B4CBAB44271AC88100C737BF /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		B4CBDD4F2719C77800270887 /* CiceCupon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceCupon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CBDD522719C77800270887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4CBDD5B2719C77B00270887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B445FA26271AB896006749E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4CBDD4C2719C77800270887 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,10 +93,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B445FA2A271AB896006749E1 /* CiceCuponTests */ = {
+			isa = PBXGroup;
+			children = (
+				B445FA2B271AB896006749E1 /* CiceCuponTests.swift */,
+				B445FA34271AB945006749E1 /* SplashPresenterTest.swift */,
+			);
+			path = CiceCuponTests;
+			sourceTree = "<group>";
+		};
+		B4CBAB2F271AC7BB00C737BF /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBAB3E271AC88100C737BF /* LoginViewController.xib */,
+				B4CBAB3F271AC88100C737BF /* LoginViewController.swift */,
+				B4CBAB40271AC88100C737BF /* LoginRouter.swift */,
+				B4CBAB41271AC88100C737BF /* LoginProvider.swift */,
+				B4CBAB42271AC88100C737BF /* LoginCoordinator.swift */,
+				B4CBAB43271AC88100C737BF /* LoginPresenter.swift */,
+				B4CBAB44271AC88100C737BF /* LoginInteractor.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		B4CBDD462719C77800270887 = {
 			isa = PBXGroup;
 			children = (
 				B4CBDD512719C77800270887 /* CiceCupon */,
+				B445FA2A271AB896006749E1 /* CiceCuponTests */,
 				B4CBDD502719C77800270887 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B4CBDD4F2719C77800270887 /* CiceCupon.app */,
+				B445FA29271AB896006749E1 /* CiceCuponTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +177,7 @@
 		B4CBDD6B2719CB6400270887 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBAB2F271AC7BB00C737BF /* LoginView */,
 				B4CBDD6C2719CB6D00270887 /* SplashView */,
 			);
 			path = Sections;
@@ -164,6 +226,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B445FA28271AB896006749E1 /* CiceCuponTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B445FA31271AB896006749E1 /* Build configuration list for PBXNativeTarget "CiceCuponTests" */;
+			buildPhases = (
+				B445FA25271AB896006749E1 /* Sources */,
+				B445FA26271AB896006749E1 /* Frameworks */,
+				B445FA27271AB896006749E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B445FA2E271AB896006749E1 /* PBXTargetDependency */,
+			);
+			name = CiceCuponTests;
+			productName = CiceCuponTests;
+			productReference = B445FA29271AB896006749E1 /* CiceCuponTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B4CBDD4E2719C77800270887 /* CiceCupon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4CBDD632719C77B00270887 /* Build configuration list for PBXNativeTarget "CiceCupon" */;
@@ -191,6 +271,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					B445FA28271AB896006749E1 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = B4CBDD4E2719C77800270887;
+					};
 					B4CBDD4E2719C77800270887 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -210,15 +294,24 @@
 			projectRoot = "";
 			targets = (
 				B4CBDD4E2719C77800270887 /* CiceCupon */,
+				B445FA28271AB896006749E1 /* CiceCuponTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B445FA27271AB896006749E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4CBDD4D2719C77800270887 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBAB45271AC88100C737BF /* LoginViewController.xib in Resources */,
 				B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */,
 				B4CBDD702719CB9C00270887 /* SplashViewController.xib in Resources */,
 				B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */,
@@ -228,18 +321,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B445FA25271AB896006749E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B445FA2C271AB896006749E1 /* CiceCuponTests.swift in Sources */,
+				B445FA35271AB945006749E1 /* SplashPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4CBDD4B2719C77800270887 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBAB49271AC88100C737BF /* LoginCoordinator.swift in Sources */,
+				B4CBAB4B271AC88100C737BF /* LoginInteractor.swift in Sources */,
+				B4CBAB46271AC88100C737BF /* LoginViewController.swift in Sources */,
 				B4CBDD872719E9AF00270887 /* MusicServerModel.swift in Sources */,
+				B4CBAB48271AC88100C737BF /* LoginProvider.swift in Sources */,
 				B4CBDD7F2719D9ED00270887 /* NetworkService.swift in Sources */,
 				B4CBDD6F2719CB9C00270887 /* SplashViewController.swift in Sources */,
 				B4CBDD762719CBE700270887 /* SplashRouter.swift in Sources */,
 				B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */,
 				B4CBDD742719CBD800270887 /* SplashInteractor.swift in Sources */,
 				B4CBDD782719CC0600270887 /* SplashCoordinator.swift in Sources */,
+				B4CBAB47271AC88100C737BF /* LoginRouter.swift in Sources */,
 				B4CBDD7A2719CCA600270887 /* SplashProvider.swift in Sources */,
+				B4CBAB4A271AC88100C737BF /* LoginPresenter.swift in Sources */,
 				B4CBDD692719C7FD00270887 /* BaseVIPER.swift in Sources */,
 				B4CBDD722719CBC300270887 /* SplashPresenter.swift in Sources */,
 				B4CBDD812719DBBA00270887 /* NetworkError.swift in Sources */,
@@ -249,6 +357,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B445FA2E271AB896006749E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4CBDD4E2719C77800270887 /* CiceCupon */;
+			targetProxy = B445FA2D271AB896006749E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B4CBDD5D2719C77B00270887 /* LaunchScreen.storyboard */ = {
@@ -262,6 +378,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B445FA2F271AB896006749E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCuponTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CiceCupon.app/CiceCupon";
+			};
+			name = Debug;
+		};
+		B445FA30271AB896006749E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCuponTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CiceCupon.app/CiceCupon";
+			};
+			name = Release;
+		};
 		B4CBDD612719C77B00270887 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +593,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B445FA31271AB896006749E1 /* Build configuration list for PBXNativeTarget "CiceCuponTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B445FA2F271AB896006749E1 /* Debug */,
+				B445FA30271AB896006749E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4CBDD4A2719C77800270887 /* Build configuration list for PBXProject "CiceCupon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
