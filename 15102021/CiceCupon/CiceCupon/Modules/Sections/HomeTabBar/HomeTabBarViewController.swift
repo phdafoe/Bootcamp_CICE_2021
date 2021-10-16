@@ -9,12 +9,10 @@ import UIKit
 
 class HomeTabBarViewController: UITabBarController {
 
-    var aux: [ResultMusic]?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint(aux?.count ?? 0)
-        // Do any additional setup after loading the view.
+
     }
 
 

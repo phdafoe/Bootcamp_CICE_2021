@@ -19,6 +19,16 @@
 		B4CBAB4F271AD68200C737BF /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB4D271AD68200C737BF /* HomeTabBarViewController.swift */; };
 		B4CBAB50271AD68200C737BF /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB4E271AD68200C737BF /* HomeTabBarViewController.xib */; };
 		B4CBAB52271AD69400C737BF /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */; };
+		B4CBAB5B271AEA0400C737BF /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB54271AEA0400C737BF /* MusicViewController.xib */; };
+		B4CBAB5C271AEA0400C737BF /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB55271AEA0400C737BF /* MusicViewController.swift */; };
+		B4CBAB5D271AEA0400C737BF /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB56271AEA0400C737BF /* MusicRouter.swift */; };
+		B4CBAB5E271AEA0400C737BF /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB57271AEA0400C737BF /* MusicProvider.swift */; };
+		B4CBAB5F271AEA0400C737BF /* MusicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB58271AEA0400C737BF /* MusicCoordinator.swift */; };
+		B4CBAB60271AEA0400C737BF /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB59271AEA0400C737BF /* MusicPresenter.swift */; };
+		B4CBAB61271AEA0400C737BF /* MusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB5A271AEA0400C737BF /* MusicInteractor.swift */; };
+		B4CBAB65271AF30A00C737BF /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB63271AF30A00C737BF /* MusicCell.swift */; };
+		B4CBAB66271AF30A00C737BF /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB64271AF30A00C737BF /* MusicCell.xib */; };
+		B4CBAB69271AF86800C737BF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B4CBAB68271AF86800C737BF /* Kingfisher */; };
 		B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD522719C77800270887 /* AppDelegate.swift */; };
 		B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5B2719C77B00270887 /* Assets.xcassets */; };
 		B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5D2719C77B00270887 /* LaunchScreen.storyboard */; };
@@ -61,6 +71,15 @@
 		B4CBAB4D271AD68200C737BF /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		B4CBAB4E271AD68200C737BF /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 		B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		B4CBAB54271AEA0400C737BF /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		B4CBAB55271AEA0400C737BF /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		B4CBAB56271AEA0400C737BF /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
+		B4CBAB57271AEA0400C737BF /* MusicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
+		B4CBAB58271AEA0400C737BF /* MusicCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCoordinator.swift; sourceTree = "<group>"; };
+		B4CBAB59271AEA0400C737BF /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
+		B4CBAB5A271AEA0400C737BF /* MusicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInteractor.swift; sourceTree = "<group>"; };
+		B4CBAB63271AF30A00C737BF /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		B4CBAB64271AF30A00C737BF /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		B4CBDD4F2719C77800270887 /* CiceCupon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceCupon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CBDD522719C77800270887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4CBDD5B2719C77B00270887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBAB69271AF86800C737BF /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +150,30 @@
 				B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */,
 			);
 			path = HomeTabBar;
+			sourceTree = "<group>";
+		};
+		B4CBAB53271AE9EF00C737BF /* MusicView */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBAB62271AF2EA00C737BF /* Cell */,
+				B4CBAB54271AEA0400C737BF /* MusicViewController.xib */,
+				B4CBAB55271AEA0400C737BF /* MusicViewController.swift */,
+				B4CBAB56271AEA0400C737BF /* MusicRouter.swift */,
+				B4CBAB57271AEA0400C737BF /* MusicProvider.swift */,
+				B4CBAB58271AEA0400C737BF /* MusicCoordinator.swift */,
+				B4CBAB59271AEA0400C737BF /* MusicPresenter.swift */,
+				B4CBAB5A271AEA0400C737BF /* MusicInteractor.swift */,
+			);
+			path = MusicView;
+			sourceTree = "<group>";
+		};
+		B4CBAB62271AF2EA00C737BF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBAB63271AF30A00C737BF /* MusicCell.swift */,
+				B4CBAB64271AF30A00C737BF /* MusicCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B4CBDD462719C77800270887 = {
@@ -193,6 +237,7 @@
 		B4CBDD6B2719CB6400270887 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBAB53271AE9EF00C737BF /* MusicView */,
 				B4CBAB4C271AD65F00C737BF /* HomeTabBar */,
 				B4CBAB2F271AC7BB00C737BF /* LoginView */,
 				B4CBDD6C2719CB6D00270887 /* SplashView */,
@@ -274,6 +319,9 @@
 			dependencies = (
 			);
 			name = CiceCupon;
+			packageProductDependencies = (
+				B4CBAB68271AF86800C737BF /* Kingfisher */,
+			);
 			productName = CiceCupon;
 			productReference = B4CBDD4F2719C77800270887 /* CiceCupon.app */;
 			productType = "com.apple.product-type.application";
@@ -306,6 +354,9 @@
 				Base,
 			);
 			mainGroup = B4CBDD462719C77800270887;
+			packageReferences = (
+				B4CBAB67271AF86800C737BF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = B4CBDD502719C77800270887 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,10 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBAB5B271AEA0400C737BF /* MusicViewController.xib in Resources */,
 				B4CBAB45271AC88100C737BF /* LoginViewController.xib in Resources */,
 				B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */,
 				B4CBDD702719CB9C00270887 /* SplashViewController.xib in Resources */,
 				B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */,
+				B4CBAB66271AF30A00C737BF /* MusicCell.xib in Resources */,
 				B4CBAB50271AD68200C737BF /* HomeTabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,13 +418,20 @@
 				B4CBAB4F271AD68200C737BF /* HomeTabBarViewController.swift in Sources */,
 				B4CBDD742719CBD800270887 /* SplashInteractor.swift in Sources */,
 				B4CBDD782719CC0600270887 /* SplashCoordinator.swift in Sources */,
+				B4CBAB61271AEA0400C737BF /* MusicInteractor.swift in Sources */,
+				B4CBAB5F271AEA0400C737BF /* MusicCoordinator.swift in Sources */,
 				B4CBAB47271AC88100C737BF /* LoginRouter.swift in Sources */,
 				B4CBDD7A2719CCA600270887 /* SplashProvider.swift in Sources */,
 				B4CBAB4A271AC88100C737BF /* LoginPresenter.swift in Sources */,
+				B4CBAB5C271AEA0400C737BF /* MusicViewController.swift in Sources */,
 				B4CBDD692719C7FD00270887 /* BaseVIPER.swift in Sources */,
+				B4CBAB5E271AEA0400C737BF /* MusicProvider.swift in Sources */,
 				B4CBDD722719CBC300270887 /* SplashPresenter.swift in Sources */,
 				B4CBDD812719DBBA00270887 /* NetworkError.swift in Sources */,
+				B4CBAB65271AF30A00C737BF /* MusicCell.swift in Sources */,
+				B4CBAB60271AEA0400C737BF /* MusicPresenter.swift in Sources */,
 				B4CBDD7C2719D64A00270887 /* AppCoreCoordinator.swift in Sources */,
+				B4CBAB5D271AEA0400C737BF /* MusicRouter.swift in Sources */,
 				B4CBDD842719DC6B00270887 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4CBAB67271AF86800C737BF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4CBAB68271AF86800C737BF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4CBAB67271AF86800C737BF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4CBDD472719C77800270887 /* Project object */;
 }

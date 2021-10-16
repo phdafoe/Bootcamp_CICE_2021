@@ -13,7 +13,20 @@ final class HomeTabBarCoordinator {
     static func tabBarCoordinator(dto: HomeTabBarCoordinatorDTO? = nil) -> UITabBarController {
         
         let tabVC = HomeTabBarViewController()
-        tabVC.aux = dto?.arrayMusic ?? []
+    
+        // Modulos
+        let musicVC = MusicCoordinator.navigation(dto: MusicCoordinatorDTO(arrayMusic: dto?.arrayMusic))
+        
+        // item
+        let musicItem = UITabBarItem(title: "Music",
+                                     image: UIImage(systemName: "music.note.list"),
+                                     selectedImage: UIImage(systemName: "music.note"))
+        
+        // Modulo+Item
+        musicVC.tabBarItem = musicItem
+        
+        // Modulos
+        tabVC.viewControllers = [musicVC]
         
         return tabVC
     }
