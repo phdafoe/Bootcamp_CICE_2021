@@ -33,17 +33,21 @@ extension SplashPresenter: SplashPresenterInputProtocol {
     func getInformationObject() -> ResultMusic? {
         self.arrayResultados[0]
     }
+    
+    func navigateLoginView(data: [ResultMusic]) {
+        self.router?.navigateToLoginView(with: data)
+    }
 
 }
 
 
-// extension que añlica la ejecucion del metodo que entran desde el Interactor
+// extension que aplica la ejecucion del metodo que entran desde el Interactor
 extension SplashPresenter: SplashInteractorOutputProtocol {
     
     func fetchDataOutputInteractor(data: MusicServerModel?) {
         self.arrayResultados.removeAll()
         self.arrayResultados = data?.feed?.results ?? []
-        self.vc?.refreshView()
+        self.navigateLoginView(data: self.arrayResultados)
     }
     
 }

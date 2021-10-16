@@ -15,7 +15,7 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 protocol LoginRouterInputProtocol {
-
+    func navigateToHome(with data: [ResultMusic])
 }
 
 final class LoginRouter: BaseRouter<LoginViewController> {
@@ -23,5 +23,14 @@ final class LoginRouter: BaseRouter<LoginViewController> {
 }
 
 extension LoginRouter: LoginRouterInputProtocol {
+    func navigateToHome(with data: [ResultMusic]) {
+        DispatchQueue.main.async {
+            let vc = HomeTabBarCoordinator.tabBarCoordinator(dto: HomeTabBarCoordinatorDTO(arrayMusic: data))
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .fullScreen
+            self.view?.present(vc, animated: true, completion: nil)
+        }
+    }
+    
     
 }

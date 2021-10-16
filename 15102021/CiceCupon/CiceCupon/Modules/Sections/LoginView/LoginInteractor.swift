@@ -29,9 +29,9 @@ extension LoginInteractor: LoginInteractorInputProtocol {
     func fetchDataMusic() {
         self.provider.fetchData { data in
             switch data {
-            case .success(let response):
+            case .success(let response): break
                 // Se invoca a la salida del interactor que van hacia el Presenter -> InteractorOutput
-                self.presenter?.fetchDataOutputInteractor(data: response)
+                //self.presenter?.fetchDataOutputInteractor(data: response)
             case .failure(let error):
                 debugPrint(error)
             }

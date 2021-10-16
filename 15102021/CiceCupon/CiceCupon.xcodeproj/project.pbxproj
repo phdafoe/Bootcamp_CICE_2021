@@ -16,6 +16,9 @@
 		B4CBAB49271AC88100C737BF /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB42271AC88100C737BF /* LoginCoordinator.swift */; };
 		B4CBAB4A271AC88100C737BF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB43271AC88100C737BF /* LoginPresenter.swift */; };
 		B4CBAB4B271AC88100C737BF /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB44271AC88100C737BF /* LoginInteractor.swift */; };
+		B4CBAB4F271AD68200C737BF /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB4D271AD68200C737BF /* HomeTabBarViewController.swift */; };
+		B4CBAB50271AD68200C737BF /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB4E271AD68200C737BF /* HomeTabBarViewController.xib */; };
+		B4CBAB52271AD69400C737BF /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */; };
 		B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBDD522719C77800270887 /* AppDelegate.swift */; };
 		B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5B2719C77B00270887 /* Assets.xcassets */; };
 		B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CBDD5D2719C77B00270887 /* LaunchScreen.storyboard */; };
@@ -55,6 +58,9 @@
 		B4CBAB42271AC88100C737BF /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B4CBAB43271AC88100C737BF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B4CBAB44271AC88100C737BF /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B4CBAB4D271AD68200C737BF /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B4CBAB4E271AD68200C737BF /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		B4CBDD4F2719C77800270887 /* CiceCupon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceCupon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CBDD522719C77800270887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4CBDD5B2719C77B00270887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +120,16 @@
 				B4CBAB44271AC88100C737BF /* LoginInteractor.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		B4CBAB4C271AD65F00C737BF /* HomeTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBAB4D271AD68200C737BF /* HomeTabBarViewController.swift */,
+				B4CBAB4E271AD68200C737BF /* HomeTabBarViewController.xib */,
+				B4CBAB51271AD69400C737BF /* HomeTabBarCoordinator.swift */,
+			);
+			path = HomeTabBar;
 			sourceTree = "<group>";
 		};
 		B4CBDD462719C77800270887 = {
@@ -177,6 +193,7 @@
 		B4CBDD6B2719CB6400270887 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B4CBAB4C271AD65F00C737BF /* HomeTabBar */,
 				B4CBAB2F271AC7BB00C737BF /* LoginView */,
 				B4CBDD6C2719CB6D00270887 /* SplashView */,
 			);
@@ -315,6 +332,7 @@
 				B4CBDD5F2719C77B00270887 /* LaunchScreen.storyboard in Resources */,
 				B4CBDD702719CB9C00270887 /* SplashViewController.xib in Resources */,
 				B4CBDD5C2719C77B00270887 /* Assets.xcassets in Resources */,
+				B4CBAB50271AD68200C737BF /* HomeTabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CBAB52271AD69400C737BF /* HomeTabBarCoordinator.swift in Sources */,
 				B4CBAB49271AC88100C737BF /* LoginCoordinator.swift in Sources */,
 				B4CBAB4B271AC88100C737BF /* LoginInteractor.swift in Sources */,
 				B4CBAB46271AC88100C737BF /* LoginViewController.swift in Sources */,
@@ -343,6 +362,7 @@
 				B4CBDD6F2719CB9C00270887 /* SplashViewController.swift in Sources */,
 				B4CBDD762719CBE700270887 /* SplashRouter.swift in Sources */,
 				B4CBDD532719C77800270887 /* AppDelegate.swift in Sources */,
+				B4CBAB4F271AD68200C737BF /* HomeTabBarViewController.swift in Sources */,
 				B4CBDD742719CBD800270887 /* SplashInteractor.swift in Sources */,
 				B4CBDD782719CC0600270887 /* SplashCoordinator.swift in Sources */,
 				B4CBAB47271AC88100C737BF /* LoginRouter.swift in Sources */,

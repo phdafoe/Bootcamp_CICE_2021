@@ -25,13 +25,14 @@ final class LoginCoordinator {
     // creamos la Vista con el retorno de los protocolos de la vista
     static func view(dto: LoginCoordinatorDTO? = nil) -> LoginViewController & LoginViewControllerProtocol {
         let vc = LoginViewController()
-        vc.presenter = self.presenter(vc: vc)
+        vc.presenter = self.presenter(vc: vc, dto: dto)
         return vc
     }
     
     // creamos el presenter con el retorno de los protocolos de entrada al presenter y salida del interactor
-    static func presenter(vc: LoginViewController) -> LoginPresenterInputProtocol & LoginInteractorOutputProtocol {
+    static func presenter(vc: LoginViewController, dto: LoginCoordinatorDTO? = nil) -> LoginPresenterInputProtocol & LoginInteractorOutputProtocol {
         let presenter = LoginPresenter(vc: vc)
+        presenter.arrayResultados = dto?.resultMusic ?? []
         presenter.interactor = self.interactor(pre: presenter)
         presenter.router = self.router(vc: vc)
         return presenter
@@ -50,5 +51,5 @@ final class LoginCoordinator {
 }
 
 struct LoginCoordinatorDTO {
-    
+    var resultMusic: [ResultMusic]?
 }

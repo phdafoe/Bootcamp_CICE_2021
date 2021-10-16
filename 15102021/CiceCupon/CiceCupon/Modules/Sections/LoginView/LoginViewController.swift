@@ -15,15 +15,48 @@ POSSIBILITY OF SUCH DAMAGE.
 import UIKit
 
 protocol LoginViewControllerProtocol {
-    
     func refreshView()
 }
 
 class LoginViewController: BaseView<LoginPresenterInputProtocol> {
+    
+    // MARK: - Variables
+    var isLoged = false
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var loginViewUsernameTF: UITextField!
+    @IBOutlet weak var loginViewPasswordTF: UITextField!
+    @IBOutlet weak var loginBTN: UIButton!
+    
+    @IBAction func loginACTION(_ sender: UIButton) {
+        if dataComplete(){
+            self.isLoged = true
+            Utils.Constantes().kPreferences.set(self.loginViewUsernameTF.text, forKey: Utils.Constantes().kUsuario)
+            Utils.Constantes().kPreferences.set(self.loginViewPasswordTF.text, forKey: Utils.Constantes().kContrasena)
+            Utils.Constantes().kPreferences.set(self.isLoged, forKey: Utils.Constantes().kUsuarioLogado)
+            self.presenter?.navigateToHomeTabBar()
+        } else {
+            self.present(Utils.muestraAlerta(titulo: "Hola!!",
+                                             mensaje: "Tienes que rellenar todos los campos"),
+                         animated: true,
+                         completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.fetchData()
+        self.configUI()
+        //self.presenter?.fetchData()
+    }
+    
+    private func configUI() {
+        self.loginBTN.layer.cornerRadius = 25
+        self.loginBTN.layer.borderWidth = 2
+        self.loginBTN.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    private func dataComplete() -> Bool {
+        return !(self.loginViewUsernameTF.text?.isEmpty ?? false) && !(self.loginViewPasswordTF.text?.isEmpty ?? false)
     }
 
 }
@@ -31,7 +64,6 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
 extension LoginViewController: LoginViewControllerProtocol {
 
     func refreshView() {
-        let aux = self.presenter?.getInformationObject()
-        debugPrint(aux!)
+        
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum HTTPMethods: String {
     case get = "GET"
@@ -43,4 +44,21 @@ struct URLEnpoint {
     static let podcast = "podcasts/top/%@/podcast-episodes.json"
     static let books = "books/top-free/%@/books.json"
     static let apps = "apps/top-free/%@/apps.json"
+}
+
+class Utils {
+    
+    struct Constantes {
+        let kUsuario = "USUARIO"
+        let kContrasena = "CONTRASENA"
+        let kUsuarioLogado = "LOGADO"
+        let kPreferences = UserDefaults.standard
+    }
+    
+    static func muestraAlerta(titulo: String, mensaje: String) -> UIAlertController {
+        let alertVC = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default))
+        return alertVC
+    }
+    
 }
