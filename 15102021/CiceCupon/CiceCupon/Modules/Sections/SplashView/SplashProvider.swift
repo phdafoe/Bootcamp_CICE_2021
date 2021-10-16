@@ -8,8 +8,7 @@
 import Foundation
 
 protocol SplashProviderProtocol {
-    func fetchData(completionHandler: @escaping (Result<MusicServerModel, NetworkError>) -> (),
-                   failure: @escaping (NetworkError) -> ())
+    func fetchData(completionHandler: @escaping (Result<MusicServerModel, NetworkError>) -> ())
 }
 
 final class SplashProvider: SplashProviderProtocol {
@@ -26,7 +25,7 @@ final class SplashProvider: SplashProviderProtocol {
             completionHandler(.success(musicServerModelDes))
         } failure: { [weak self] networkError in
             guard self != nil else { return }
-            failure(networkError)
+            completionHandler(.failure(networkError))
         }
     }
 }
