@@ -21,12 +21,11 @@ class SplashViewController: BaseView<SplashPresenterInputProtocol> {
 
 }
 
-extension SplashViewController: SplashViewControllerProtocol{
+extension SplashViewController: SplashViewControllerProtocol {
     
     func refreshView() {
         let aux = self.presenter?.getInformationObject()
         debugPrint(aux!)
     }
-    
     
 }

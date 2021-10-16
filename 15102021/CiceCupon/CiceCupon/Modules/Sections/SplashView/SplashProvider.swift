@@ -22,14 +22,12 @@ final class SplashProvider: SplashProviderProtocol {
         self.networkService.requestGeneric(requestObject: SplashProviderRequest.requestData(data: "\(10)"),
                                            entityClass: MusicServerModel.self) { [weak self] musicServerModel in
             guard self != nil else { return }
-            if let musicServerModelDes = musicServerModel{
-                completionHandler(.success(musicServerModelDes))
-            }
+            guard let musicServerModelDes = musicServerModel else { return }
+            completionHandler(.success(musicServerModelDes))
         } failure: { [weak self] networkError in
             guard self != nil else { return }
             failure(networkError)
         }
-
     }
 }
 
