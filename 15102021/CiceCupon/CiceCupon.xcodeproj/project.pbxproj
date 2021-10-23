@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B445FA2C271AB896006749E1 /* CiceCuponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B445FA2B271AB896006749E1 /* CiceCuponTests.swift */; };
 		B445FA35271AB945006749E1 /* SplashPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B445FA34271AB945006749E1 /* SplashPresenterTest.swift */; };
+		B47C47652723EF9000DD5336 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C47642723EF9000DD5336 /* LocalizedKeys.swift */; };
 		B4CBAB45271AC88100C737BF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB3E271AC88100C737BF /* LoginViewController.xib */; };
 		B4CBAB46271AC88100C737BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB3F271AC88100C737BF /* LoginViewController.swift */; };
 		B4CBAB47271AC88100C737BF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBAB40271AC88100C737BF /* LoginRouter.swift */; };
@@ -61,6 +62,7 @@
 		B445FA29271AB896006749E1 /* CiceCuponTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiceCuponTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B445FA2B271AB896006749E1 /* CiceCuponTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiceCuponTests.swift; sourceTree = "<group>"; };
 		B445FA34271AB945006749E1 /* SplashPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTest.swift; sourceTree = "<group>"; };
+		B47C47642723EF9000DD5336 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
 		B4CBAB3E271AC88100C737BF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B4CBAB3F271AC88100C737BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4CBAB40271AC88100C737BF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				B4CBDD832719DC6B00270887 /* Utils.swift */,
+				B47C47642723EF9000DD5336 /* LocalizedKeys.swift */,
 			);
 			path = "Utils+Helpers";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				B4CBAB60271AEA0400C737BF /* MusicPresenter.swift in Sources */,
 				B4CBDD7C2719D64A00270887 /* AppCoreCoordinator.swift in Sources */,
 				B4CBAB5D271AEA0400C737BF /* MusicRouter.swift in Sources */,
+				B47C47652723EF9000DD5336 /* LocalizedKeys.swift in Sources */,
 				B4CBDD842719DC6B00270887 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +462,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B445FA2F271AB896006749E1 /* Debug */ = {
+		B445FA2F271AB896006749E1 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -478,9 +482,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CiceCupon.app/CiceCupon";
 			};
-			name = Debug;
+			name = DEV;
 		};
-		B445FA30271AB896006749E1 /* Release */ = {
+		B445FA30271AB896006749E1 /* PRE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,9 +504,113 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CiceCupon.app/CiceCupon";
 			};
-			name = Release;
+			name = PRE;
 		};
-		B4CBDD612719C77B00270887 /* Debug */ = {
+		B47C47612723ECB500DD5336 /* PRO */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PRO;
+		};
+		B47C47622723ECB500DD5336 /* PRO */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiceCupon/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCupon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = PRO;
+		};
+		B47C47632723ECB500DD5336 /* PRO */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCuponTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CiceCupon.app/CiceCupon";
+			};
+			name = PRO;
+		};
+		B4CBDD612719C77B00270887 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -561,9 +669,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = DEV;
 		};
-		B4CBDD622719C77B00270887 /* Release */ = {
+		B4CBDD622719C77B00270887 /* PRE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -616,9 +724,9 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = PRE;
 		};
-		B4CBDD642719C77B00270887 /* Debug */ = {
+		B4CBDD642719C77B00270887 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -638,13 +746,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = DEV;
 		};
-		B4CBDD652719C77B00270887 /* Release */ = {
+		B4CBDD652719C77B00270887 /* PRE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -664,11 +773,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.Tecnologia.iOS.CiceCupon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = PRE;
 		};
 /* End XCBuildConfiguration section */
 
@@ -676,29 +786,32 @@
 		B445FA31271AB896006749E1 /* Build configuration list for PBXNativeTarget "CiceCuponTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B445FA2F271AB896006749E1 /* Debug */,
-				B445FA30271AB896006749E1 /* Release */,
+				B445FA2F271AB896006749E1 /* DEV */,
+				B445FA30271AB896006749E1 /* PRE */,
+				B47C47632723ECB500DD5336 /* PRO */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PRE;
 		};
 		B4CBDD4A2719C77800270887 /* Build configuration list for PBXProject "CiceCupon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4CBDD612719C77B00270887 /* Debug */,
-				B4CBDD622719C77B00270887 /* Release */,
+				B4CBDD612719C77B00270887 /* DEV */,
+				B4CBDD622719C77B00270887 /* PRE */,
+				B47C47612723ECB500DD5336 /* PRO */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PRE;
 		};
 		B4CBDD632719C77B00270887 /* Build configuration list for PBXNativeTarget "CiceCupon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4CBDD642719C77B00270887 /* Debug */,
-				B4CBDD652719C77B00270887 /* Release */,
+				B4CBDD642719C77B00270887 /* DEV */,
+				B4CBDD652719C77B00270887 /* PRE */,
+				B47C47622723ECB500DD5336 /* PRO */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PRE;
 		};
 /* End XCConfigurationList section */
 

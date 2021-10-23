@@ -38,12 +38,13 @@ struct RequestDTO {
 }
 
 struct URLEnpoint {
-    
+    #if DEV
     static let baseUrl = "https://rss.applemarketingtools.com/api/v2/us/"
     static let music = "music/most-played/%@/songs.json"
     static let podcast = "podcasts/top/%@/podcast-episodes.json"
     static let books = "books/top-free/%@/books.json"
     static let apps = "apps/top-free/%@/apps.json"
+    #endif
 }
 
 class Utils {
