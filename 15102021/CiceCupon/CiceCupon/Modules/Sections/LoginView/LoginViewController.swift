@@ -36,10 +36,7 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
             Utils.Constantes().kPreferences.set(self.isLoged, forKey: Utils.Constantes().kUsuarioLogado)
             self.presenter?.navigateToHomeTabBar()
         } else {
-            self.present(Utils.muestraAlerta(titulo: "Hola!!",
-                                             mensaje: "Tienes que rellenar todos los campos"),
-                         animated: true,
-                         completion: nil)
+            self.presenter?.showCustomAlertError()
         }
     }
     
@@ -57,6 +54,10 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
     
     private func dataComplete() -> Bool {
         return !(self.loginViewUsernameTF.text?.isEmpty ?? false) && !(self.loginViewPasswordTF.text?.isEmpty ?? false)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }

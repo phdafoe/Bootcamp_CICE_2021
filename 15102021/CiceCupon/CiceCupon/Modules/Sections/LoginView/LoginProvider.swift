@@ -38,7 +38,7 @@ class LoginProvider: LoginProviderProtocol {
 
 struct LoginProviderRequest {
     
-    static func requestData(data numeroItems: String) -> RequestDTO {
+    static func requestData(data numeroItems: String, idiom: String? = nil) -> RequestDTO {
         let arguments: [CVarArg] = [numeroItems]
         let urlComplete = String(format: URLEnpoint.music, arguments: arguments)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)

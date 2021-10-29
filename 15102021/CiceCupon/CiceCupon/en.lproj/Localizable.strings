@@ -1,0 +1,17 @@
+// General
+"title_my_alert" = "My Content";
+"message_my_alert" = "Your content downloaded have a full limit, delete or clear files on de device";
+"general_accept" = "Accept";
+"general_cancel" = "Cancel";
+"general_continue" = "Continue";
+
+// Login
+"title_hello" = "Hello!!";
+"mesage_warning_alert" = "You have to fill all fields to continue";
+"success_title_alert" = "Congratulations";
+"success_message_alert" = "You have completed all process for user register succeded, do you want continue inside app";
+
+// Bill
+
+
+// Menu

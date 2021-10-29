@@ -16,6 +16,7 @@ import Foundation
 
 protocol LoginRouterInputProtocol {
     func navigateToHome(with data: [ResultMusic])
+    func showCustomAlertError(with model: CustomAlertViewModel, delegate: CustomAlertDefaultViewControllerDelegate?)
 }
 
 final class LoginRouter: BaseRouter<LoginViewController> {
@@ -23,6 +24,7 @@ final class LoginRouter: BaseRouter<LoginViewController> {
 }
 
 extension LoginRouter: LoginRouterInputProtocol {
+    
     func navigateToHome(with data: [ResultMusic]) {
         DispatchQueue.main.async {
             let vc = HomeTabBarCoordinator.tabBarCoordinator(dto: HomeTabBarCoordinatorDTO(arrayMusic: data))
@@ -30,6 +32,15 @@ extension LoginRouter: LoginRouterInputProtocol {
             vc.modalPresentationStyle = .fullScreen
             self.view?.present(vc, animated: true, completion: nil)
         }
+    }
+    
+    func showCustomAlertError(with model: CustomAlertViewModel, delegate: CustomAlertDefaultViewControllerDelegate?) {
+        let vc = CustomAlertDefaultViewController()
+        vc.viewModel = model
+        vc.delegate = delegate
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.view?.present(vc, animated: true, completion: nil)
     }
     
     

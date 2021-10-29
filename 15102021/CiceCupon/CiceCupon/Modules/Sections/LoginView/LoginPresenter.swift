@@ -16,12 +16,11 @@ import Foundation
 
 protocol LoginPresenterInputProtocol {
     func navigateToHomeTabBar()
-    //func fetchData()
-    //func getInformationObject() -> ResultMusic?
+    func showCustomAlertError()
 }
 
 protocol LoginInteractorOutputProtocol {
-    //func fetchDataOutputInteractor(data: MusicServerModel?)
+    
 }
 
 final class LoginPresenter: BasePresenter<LoginViewControllerProtocol, LoginInteractorInputProtocol, LoginRouterInputProtocol> {
@@ -33,26 +32,23 @@ final class LoginPresenter: BasePresenter<LoginViewControllerProtocol, LoginInte
 extension LoginPresenter: LoginPresenterInputProtocol {
     
     func navigateToHomeTabBar() {
-        self.router?.navigateToHome(with: self.arrayResultados)
+        self.router?.showCustomAlertError(with: CustomAlertViewModel(type: .successLogin), delegate: self)
     }
     
+    func showCustomAlertError() {
+        self.router?.showCustomAlertError(with: CustomAlertViewModel(type: .confirmationLogin), delegate: nil)
+    }
     
-//    func fetchData() {
-//        self.interactor?.fetchDataMusic()
-//    }
-//
-//    func getInformationObject() -> ResultMusic? {
-//        self.arrayResultados[0]
-//    }
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
     
-//    func fetchDataOutputInteractor(data: MusicServerModel?) {
-//        self.arrayResultados.removeAll()
-//        self.arrayResultados = data?.feed?.results ?? []
-//        self.vc?.refreshView()
-//    }
+}
+
+extension LoginPresenter: CustomAlertDefaultViewControllerDelegate {
     
+    func defaultPrimaryButtonPressed() {
+        self.router?.navigateToHome(with: self.arrayResultados)
+    }
 }
 
