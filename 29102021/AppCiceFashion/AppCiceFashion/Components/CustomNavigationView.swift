@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct CustomNavigationView: View {
+    
+    @State private var showAlert = false
+    @State private var showAlertDos = false
+    @Binding var showCustomAlertView: Bool
+    
     var body: some View {
         ZStack{
             
@@ -16,17 +21,37 @@ struct CustomNavigationView: View {
             HStack(spacing: 8) {
                 
                 Button(action: {
-                    
+                    self.showAlert = true
                 }) {
                     Image(systemName: "slider.horizontal.3")
+                }
+                .alert(isPresented: self.$showAlert) {
+                    Alert(title: Text("Hola!"),
+                          message: Text("Aqui tenemos una Alerta"),
+                          primaryButton: .default(Text("OK"), action: {
+                        //
+                    }),
+                          secondaryButton: .cancel(Text("cancel"), action: {
+                        //
+                    }))
                 }
                 
                 Spacer()
 
                 Button(action: {
-                    
+                    self.showAlertDos.toggle()
                 }) {
                     Image(systemName: "magnifyingglass")
+                }
+                .alert("Importante", isPresented: self.$showAlertDos) {
+                    Button("OK") {
+                        //
+                    }
+                    Button(role: .cancel) {
+                        //
+                    } label: {
+                        Text("Cancel")
+                    }
                 }
                 
                 Button(action: {
@@ -36,21 +61,23 @@ struct CustomNavigationView: View {
                 }
                 
                 Button(action: {
-                    
+                    self.showCustomAlertView.toggle()
                 }) {
                     Image(systemName: "cart")
                 }
             }
+            .padding(.horizontal, 8)
             .font(.callout)
             .foregroundColor(.black)
         }
         .background(Color.white)
-        .padding(.horizontal, 8)
+        
     }
 }
 
-struct CustomNavigationView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomNavigationView()
-    }
-}
+
+//struct CustomNavigationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomNavigationView()
+//    }
+//}

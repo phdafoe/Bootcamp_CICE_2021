@@ -67,7 +67,12 @@ struct CustomMainView: View {
             ForEach(customData) { item in
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                     ForEach(item.myRows) { itemRow in
-                        CardCell(model: itemRow)
+                        NavigationLink {
+                            DetailFashionView(model: itemRow)
+                        } label: {
+                            CardCell(model: itemRow)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
@@ -77,17 +82,17 @@ struct CustomMainView: View {
 
 struct CardCell: View {
     
-    var model: Row
+    var model: Row? = nil
     
     var body: some View {
         VStack(spacing: 20) {
-            Image(model.image)
+            Image(model?.image ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
             HStack{
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(model.name).font(.headline)
-                    Text(model.price).fontWeight(.black)
+                    Text(model?.name ?? "").font(.callout).lineLimit(1)
+                    Text(model?.price ?? "").fontWeight(.semibold)
                 }
                 Spacer()
                 Button(action: {
