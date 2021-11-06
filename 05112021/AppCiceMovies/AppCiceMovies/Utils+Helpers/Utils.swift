@@ -42,7 +42,7 @@ struct URLEndpoint {
         case firebase
     }
     
-    static let endpointBooks = "books/top-free/50/books.json"
+    static let endpointBooks = "books/top-free/20/books.json"
 }
 
 extension URLEndpoint {

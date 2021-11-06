@@ -1,22 +1,27 @@
 //
-//  BookViewModel.swift
+//  BooksProvider.swift
 //  AppCiceMovies
 //
-//  Created by Andres Felipe Ocampo Eljaiek on 5/11/21.
+//  Created by Andres Felipe Ocampo Eljaiek on 6/11/21.
 //
 
 import Foundation
 import Combine
 
+protocol BooksProviderProtocol {
+    func fetchBooksAppleProvider(completionHandler: @escaping(Result<AppleRssServerModel, NetworkingError>) -> ())
+}
 
-final class BookViewModel: ObservableObject {
+final class BooksProvider {
     
-    @Published var arrayBooks: [ResultRss] = []
     var cancellable: Set<AnyCancellable> = []
-    
     let networkService: NetworkServiceProtocol = NetworkService()
     
-    func fetchBooksApple() {
+}
+
+extension BooksProvider: BooksProviderProtocol {
+    
+    func fetchBooksAppleProvider(completionHandler: @escaping(Result<AppleRssServerModel, NetworkingError>) -> ()) {
         let request = RequestDTO(params: nil,
                                  arrayParams: nil,
                                  method: .get,
@@ -30,14 +35,14 @@ final class BookViewModel: ObservableObject {
                 switch completionTask {
                 case .finished: break
                 case .failure(let error):
-                    debugPrint(error)
+                    completionHandler(.failure(error))
                 }
             } receiveValue: { [weak self] resultData in
                 guard self != nil else { return }
-                self?.arrayBooks = resultData.feed?.results ?? []
+                completionHandler(.success(resultData))
             }
             .store(in: &cancellable)
-
     }
+    
     
 }
