@@ -36,11 +36,9 @@ struct MoviesPosterCarrouselView: View {
 
 struct MoviePosterCell: View {
     
-    //let movieModel: ResultNowPlaying
     @ObservedObject var imageLoaderVM = ImageLoader()
     
     init(model: ResultNowPlaying) {
-        //self.movieModel = model
         self.imageLoaderVM.loadImage(whit: model.posterUrl)
     }
     
