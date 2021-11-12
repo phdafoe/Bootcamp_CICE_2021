@@ -12,7 +12,6 @@ protocol NetworkServiceProtocol {
     func requestGeneric<M: Decodable>(request: RequestDTO, entityClass: M.Type) -> AnyPublisher<M, NetworkingError>
 }
 
-
 final class NetworkService: NetworkServiceProtocol {
     
     func requestGeneric<M>(request: RequestDTO, entityClass: M.Type) -> AnyPublisher<M, NetworkingError> where M : Decodable {

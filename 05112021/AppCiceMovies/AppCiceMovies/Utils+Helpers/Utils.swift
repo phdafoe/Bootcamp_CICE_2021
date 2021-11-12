@@ -42,7 +42,8 @@ struct URLEndpoint {
         case firebase
     }
     
-    static let endpointBooks = "books/top-free/20/books.json"
+    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Constants.Api.apiKey)"
+    static let endpointMoviesPopular = "movie/popular?api_key=\(Constants.Api.apiKey)"
 }
 
 extension URLEndpoint {
@@ -51,11 +52,11 @@ extension URLEndpoint {
         case .backend:
             switch self.targetDefault{
             case .DEV:
-                return "https://rss.applemarketingtools.com/api/v2/es/"
+                return ""
             case .PRE:
-                return "https://rss.applemarketingtools.com/api/v3/es/"
+                return ""
             case .PRO:
-                return "https://rss.applemarketingtools.com/api/v4/es/"
+                return ""
             }
         case .webService:
             switch self.targetDefault{
@@ -64,25 +65,25 @@ extension URLEndpoint {
             case .PRE:
                 return ""
             case .PRO:
-                return "https://rss.applemarketingtools.com/api/v2/es/"
+                return "https://api.themoviedb.org/3/"
             }
         case .heroku:
             switch self.targetDefault{
             case .DEV:
-                return "https://heroku.com/api/v2/es/"
+                return ""
             case .PRE:
-                return "https://heroku.com/api/v3/es/"
+                return ""
             case .PRO:
-                return "https://heroku.com/api/v4/es/"
+                return ""
             }
         case .firebase:
             switch self.targetDefault{
             case .DEV:
-                return "https://firebase.com/api/v2/es/"
+                return ""
             case .PRE:
-                return "https://firebase.com/api/v3/es/"
+                return ""
             case .PRO:
-                return "https://firebase.com/api/v4/es/"
+                return ""
             }
         }
     }
