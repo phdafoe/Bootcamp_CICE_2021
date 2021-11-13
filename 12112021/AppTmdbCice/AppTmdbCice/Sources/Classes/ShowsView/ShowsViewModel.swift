@@ -11,12 +11,16 @@ import Foundation
 protocol ShowsInteractorOutputProtocol: BaseInteractorOutputProtocol {
     func setInfoTvAiringTodayViewModel(data: [ResultShows]?)
     func setInfoTvOnTheAirViewModel(data: [ResultShows]?)
+    func setInfoTvPopularViewModel(data: [ResultShows]?)
+    func setInfoTvTopRatedViewModel(data: [ResultShows]?)
 }
 
 final class ShowsViewModel: BaseViewModel, ObservableObject {
     
     @Published var arrayTvAiringToday: [ResultShows] = []
     @Published var arrayTvOnTheAir: [ResultShows] = []
+    @Published var arrayTvPopular: [ResultShows] = []
+    @Published var arrayTvTopRated: [ResultShows] = []
     
     var interactor: ShowsInteractorInputProtocol? {
         super.baseInteractor as? ShowsInteractorInputProtocol
@@ -25,6 +29,8 @@ final class ShowsViewModel: BaseViewModel, ObservableObject {
     func fetchTvShowsData() {
         self.interactor?.fetchDataTvAiringTodayInteractor()
         self.interactor?.fetchDataTvOnTheAirInteractor()
+        self.interactor?.fetchDataTvPopularInteractor()
+        self.interactor?.fetcDataTvTopRatedInteractor()
     }
 }
 
@@ -38,5 +44,15 @@ extension ShowsViewModel: ShowsInteractorOutputProtocol {
     func setInfoTvOnTheAirViewModel(data: [ResultShows]?) {
         self.arrayTvOnTheAir.removeAll()
         self.arrayTvOnTheAir = data ?? []
+    }
+    
+    func setInfoTvPopularViewModel(data: [ResultShows]?) {
+        self.arrayTvPopular.removeAll()
+        self.arrayTvPopular = data ?? []
+    }
+    
+    func setInfoTvTopRatedViewModel(data: [ResultShows]?) {
+        self.arrayTvTopRated.removeAll()
+        self.arrayTvTopRated = data ?? []
     }
 }

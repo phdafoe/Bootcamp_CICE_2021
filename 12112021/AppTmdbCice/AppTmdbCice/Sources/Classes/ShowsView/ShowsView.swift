@@ -32,6 +32,30 @@ struct ShowsView: View {
                 }
             }
             .listRowInsets(EdgeInsets(top: 16,
+                                       leading: 0,
+                                       bottom: 8,
+                                       trailing: 0))
+            
+            Group{
+                if !self.viewModel.arrayTvPopular.isEmpty {
+                    ShowsPosterCarrouselView(title: "Tv Popular",
+                                             isPosterFromShowsView: false,
+                                             showsModel: self.viewModel.arrayTvPopular)
+                }
+            }
+            .listRowInsets(EdgeInsets(top: 16,
+                                       leading: 16,
+                                       bottom: 8,
+                                       trailing: 16))
+            
+            Group{
+                if !self.viewModel.arrayTvTopRated.isEmpty {
+                    ShowsPosterCarrouselView(title: "Top Rated",
+                                             isPosterFromShowsView: false,
+                                             showsModel: self.viewModel.arrayTvTopRated)
+                }
+            }
+            .listRowInsets(EdgeInsets(top: 16,
                                        leading: 16,
                                        bottom: 8,
                                        trailing: 16))
