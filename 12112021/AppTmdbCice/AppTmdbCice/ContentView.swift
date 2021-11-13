@@ -17,7 +17,16 @@ struct ContentView: View {
                         Text("Movies")
                     }
                 }
+            
+            ShowsCoordinator.navigation()
+                .tabItem {
+                    VStack{
+                        Image(systemName: "tv")
+                        Text("Tv")
+                    }
+                }
         }
+        .accentColor(.red)
         .environment(\.colorScheme, .dark)
     }
 }
