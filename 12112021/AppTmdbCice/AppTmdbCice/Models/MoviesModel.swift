@@ -1,5 +1,5 @@
 //
-//  MoviesNowPlayingServerModel.swift
+//  MoviesModel.swift
 //  AppTmdbCice
 //
 //  Created by Andres Felipe Ocampo Eljaiek on 12/11/21.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - MoviesNowPlayingServerModel
-struct MoviesNowPlayingServerModel: Codable {
+// MARK: - MoviesModel
+struct MoviesModel: Codable {
     let page: Int?
     let results: [ResultNowPlaying]?
     let totalPages: Int?
@@ -60,12 +60,16 @@ struct ResultNowPlaying: Codable, Identifiable {
     var posterUrl: URL {
         return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")")!
     }
+    
+    var backdropUrl : URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(backdropPath ?? "")")!
+    }
 }
 
-extension MoviesNowPlayingServerModel {
+extension MoviesModel {
     
     static var stubbedMoviesNowPlaying: [ResultNowPlaying] {
-        let response: MoviesNowPlayingServerModel? = try? Bundle.main.loadAndDecodeJSON(filename: "MoviesNowPlayingServerModel")
+        let response: MoviesModel? = try? Bundle.main.loadAndDecodeJSON(filename: "MoviesModel")
         return response?.results ?? []
     }
     

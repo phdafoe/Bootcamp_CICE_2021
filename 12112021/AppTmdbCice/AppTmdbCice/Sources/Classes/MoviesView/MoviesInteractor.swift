@@ -11,12 +11,16 @@ import Foundation
 protocol MoviesInteractorInputProtocol: BaseInteractorInputProtocol {
     func fetchDataNowPlayingInteractor()
     func fetchDataPopularInteractor()
+    func fetchDataTopRatedInteractor()
+    func fetchDataUpComingInteractor()
 }
 
 // Output
 protocol MoviesProviderOutputProtocol: BaseProviderOutputProtocol {
     func setInfoNowPlaying(completionData: Result<[ResultNowPlaying]?, NetworkingError>)
     func setInfoPopular(completionData: Result<[ResultNowPlaying]?, NetworkingError>)
+    func setInfoTopRated(completionData: Result<[ResultNowPlaying]?, NetworkingError>)
+    func setInfoUpComing(completionData: Result<[ResultNowPlaying]?, NetworkingError>)
 }
 
 final class MoviesInteractor: BaseInteractor {
@@ -40,6 +44,14 @@ extension MoviesInteractor: MoviesInteractorInputProtocol {
         self.provider?.fetchDataPopularProvider()
     }
     
+    func fetchDataTopRatedInteractor() {
+        self.provider?.fetchDataTopRatedProvider()
+    }
+    
+    func fetchDataUpComingInteractor() {
+        self.provider?.fetchDataUpComingProvider()
+    }
+    
 }
 
 // extension Output
@@ -57,6 +69,24 @@ extension MoviesInteractor: MoviesProviderOutputProtocol {
         switch completionData{
         case .success(let data):
             self.viewModel?.setInfoPopularViewModel(data: data)
+        case .failure(let error):
+            debugPrint(error)
+        }
+    }
+    
+    func setInfoTopRated(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
+        switch completionData{
+        case .success(let data):
+            self.viewModel?.setInfoTopRatedViewModel(data: data)
+        case .failure(let error):
+            debugPrint(error)
+        }
+    }
+    
+    func setInfoUpComing(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
+        switch completionData{
+        case .success(let data):
+            self.viewModel?.setInfoUpComingViewModel(data: data)
         case .failure(let error):
             debugPrint(error)
         }

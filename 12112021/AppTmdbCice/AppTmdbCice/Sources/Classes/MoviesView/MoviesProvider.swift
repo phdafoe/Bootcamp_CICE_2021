@@ -12,6 +12,8 @@ import Combine
 protocol MoviesProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataNowPlayingProvider()
     func fetchDataPopularProvider()
+    func fetchDataTopRatedProvider()
+    func fetchDataUpComingProvider()
 }
 
 final class MoviesProvider: BaseProvider {
@@ -36,7 +38,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
                                  endpoint: URLEndpoint.endpointMoviesNowPlaying)
         
         self.networkService.requestGeneric(request: request,
-                                           entityClass: MoviesNowPlayingServerModel.self)
+                                           entityClass: MoviesModel.self)
             .sink { completion in
                 switch completion{
                 case .finished: break
@@ -57,7 +59,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
                                  endpoint: URLEndpoint.endpointMoviesPopular)
         
         self.networkService.requestGeneric(request: request,
-                                           entityClass: MoviesNowPlayingServerModel.self)
+                                           entityClass: MoviesModel.self)
             .sink { completion in
                 switch completion{
                 case .finished: break
@@ -66,6 +68,48 @@ extension MoviesProvider: MoviesProviderInputProtocol {
                 }
             } receiveValue: { resultData in
                 self.interactor?.setInfoPopular(completionData: .success(resultData.results))
+            }
+            .store(in: &cancellable)
+    }
+    
+    func fetchDataTopRatedProvider() {
+        let request = RequestDTO(params: nil,
+                                 arrayParams: nil,
+                                 method: .get,
+                                 urlContext: .webService,
+                                 endpoint: URLEndpoint.endpointMoviesTopRated)
+        
+        self.networkService.requestGeneric(request: request,
+                                           entityClass: MoviesModel.self)
+            .sink { completion in
+                switch completion{
+                case .finished: break
+                case .failure(let error):
+                    self.interactor?.setInfoTopRated(completionData: .failure(error))
+                }
+            } receiveValue: { resultData in
+                self.interactor?.setInfoTopRated(completionData: .success(resultData.results))
+            }
+            .store(in: &cancellable)
+    }
+    
+    func fetchDataUpComingProvider() {
+        let request = RequestDTO(params: nil,
+                                 arrayParams: nil,
+                                 method: .get,
+                                 urlContext: .webService,
+                                 endpoint: URLEndpoint.endpointMoviesUpComing)
+        
+        self.networkService.requestGeneric(request: request,
+                                           entityClass: MoviesModel.self)
+            .sink { completion in
+                switch completion{
+                case .finished: break
+                case .failure(let error):
+                    self.interactor?.setInfoUpComing(completionData: .failure(error))
+                }
+            } receiveValue: { resultData in
+                self.interactor?.setInfoUpComing(completionData: .success(resultData.results))
             }
             .store(in: &cancellable)
     }

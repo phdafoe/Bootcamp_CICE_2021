@@ -10,12 +10,14 @@ import SwiftUI
 struct MoviesPosterCarrouselView: View {
     
     var title: String
+    var isPosterFromMoviesView: Bool
     var moviesModel: [ResultNowPlaying]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
                 Text(title)
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal)
                 Rectangle()
@@ -26,7 +28,7 @@ struct MoviesPosterCarrouselView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel) { movie in
-                        MoviePosterCell(model: movie)
+                        MoviePosterCell(model: movie, isPoster: self.isPosterFromMoviesView)
                     }
                 }
             }
@@ -37,33 +39,57 @@ struct MoviesPosterCarrouselView: View {
 struct MoviePosterCell: View {
     
     @ObservedObject var imageLoaderVM = ImageLoader()
+    private var isPoster: Bool
+    private var modelData: ResultNowPlaying
     
-    init(model: ResultNowPlaying) {
-        self.imageLoaderVM.loadImage(whit: model.posterUrl)
+    init(model: ResultNowPlaying, isPoster: Bool? = true) {
+        self.modelData = model
+        self.isPoster = isPoster ?? false
+        if isPoster ?? false {
+            self.imageLoaderVM.loadImage(whit: model.posterUrl)
+        } else {
+            self.imageLoaderVM.loadImage(whit: model.backdropUrl)
+        }
     }
     
     var body: some View {
-        ZStack{
-            if self.imageLoaderVM.image != nil {
-                Image(uiImage: self.imageLoaderVM.image!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(8)
-                    .shadow(radius: 10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.red, lineWidth: 1)
-                    )
-                
+        VStack{
+            ZStack{
+                if self.imageLoaderVM.image != nil {
+                    Image(uiImage: self.imageLoaderVM.image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(8)
+                        .shadow(radius: 10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.red, lineWidth: 1)
+                        )
+                    
+                } else {
+                    Rectangle()
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]),
+                                             startPoint: .bottom,
+                                             endPoint: .top))
+                        .cornerRadius(8)
+                }
+            }
+            .frame(width: self.isPoster ? 240 : 270, height: self.isPoster ? 306 : 150)
+            
+            if !self.isPoster {
+                Text(self.modelData.originalTitle ?? "")
+                    .fontWeight(.semibold)
+                    .padding(.top, 15)
+                    .lineLimit(1)
             }
         }
-        .frame(width: 240, height: 306)
     }
 }
 
 struct MoviesPosterCarrouselView_Previews: PreviewProvider {
     static var previews: some View {
         MoviesPosterCarrouselView(title: "Now Playing",
-                                  moviesModel: MoviesNowPlayingServerModel.stubbedMoviesNowPlaying)
+                                  isPosterFromMoviesView: false,
+                                  moviesModel: MoviesModel.stubbedMoviesNowPlaying)
     }
 }

@@ -16,6 +16,7 @@ struct MoviesView: View {
             Group{
                 if !self.viewModel.arrayMoviesNowPlaying.isEmpty {
                     MoviesPosterCarrouselView(title: "Now Playing",
+                                              isPosterFromMoviesView: true,
                                               moviesModel: self.viewModel.arrayMoviesNowPlaying)
                 }
             }.listRowInsets(EdgeInsets(top: 16,
@@ -26,13 +27,38 @@ struct MoviesView: View {
             Group{
                 if !self.viewModel.arrayMoviesPopular.isEmpty {
                     MoviesPosterCarrouselView(title: "Popular",
+                                              isPosterFromMoviesView: false,
                                               moviesModel: self.viewModel.arrayMoviesPopular)
                 }
             }
             .listRowInsets(EdgeInsets(top: 16,
-                                       leading: 0,
+                                       leading: 16,
                                        bottom: 8,
-                                       trailing: 0))
+                                       trailing: 16))
+            
+            Group{
+                if !self.viewModel.arrayMoviesTopRated.isEmpty {
+                    MoviesPosterCarrouselView(title: "Top Rated",
+                                              isPosterFromMoviesView: false,
+                                              moviesModel: self.viewModel.arrayMoviesTopRated)
+                }
+            }
+            .listRowInsets(EdgeInsets(top: 16,
+                                       leading: 16,
+                                       bottom: 8,
+                                       trailing: 16))
+            
+            Group{
+                if !self.viewModel.arrayMoviesUpComing.isEmpty {
+                    MoviesPosterCarrouselView(title: "Up Coming",
+                                              isPosterFromMoviesView: true,
+                                              moviesModel: self.viewModel.arrayMoviesUpComing)
+                }
+            }
+            .listRowInsets(EdgeInsets(top: 16,
+                                       leading: 16,
+                                       bottom: 8,
+                                       trailing: 16))
         }
         .listStyle(PlainListStyle())
         .navigationBarTitle("Movies")
