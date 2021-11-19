@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4077C612747F98400A26AE3 /* MoviesShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4077C602747F98400A26AE3 /* MoviesShowsModel.swift */; };
 		B49ADBA7273EBD3800FDC3CD /* AppTmdbCiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADBA6273EBD3800FDC3CD /* AppTmdbCiceApp.swift */; };
 		B49ADBA9273EBD3800FDC3CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADBA8273EBD3800FDC3CD /* ContentView.swift */; };
 		B49ADBAB273EBD3C00FDC3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49ADBAA273EBD3C00FDC3CD /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4077C602747F98400A26AE3 /* MoviesShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesShowsModel.swift; sourceTree = "<group>"; };
 		B49ADBA3273EBD3800FDC3CD /* AppTmdbCice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTmdbCice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49ADBA6273EBD3800FDC3CD /* AppTmdbCiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTmdbCiceApp.swift; sourceTree = "<group>"; };
 		B49ADBA8273EBD3800FDC3CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4077C5F2747F8B900A26AE3 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				B4077C602747F98400A26AE3 /* MoviesShowsModel.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		B49ADB9A273EBD3800FDC3CD = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		B49ADBA5273EBD3800FDC3CD /* AppTmdbCice */ = {
 			isa = PBXGroup;
 			children = (
+				B4077C5F2747F8B900A26AE3 /* ModelView */,
 				B4D81351273FAB8300FE983B /* UIKitViews */,
 				B4D8134D273FAB8300FE983B /* Utils+Helpers */,
 				B4D8134A273FAB8300FE983B /* WebService */,
@@ -355,6 +366,7 @@
 				B4D81358273FAB8300FE983B /* SafariView.swift in Sources */,
 				B4D81378273FE74C00FE983B /* DetailMovieProvider.swift in Sources */,
 				B4D8135F273FC63800FE983B /* ShowsInteractor.swift in Sources */,
+				B4077C612747F98400A26AE3 /* MoviesShowsModel.swift in Sources */,
 				B4D81354273FAB8300FE983B /* NetworkError.swift in Sources */,
 				B4D8136F273FE50000FE983B /* DetailMovieModel.swift in Sources */,
 				B49ADBA7273EBD3800FDC3CD /* AppTmdbCiceApp.swift in Sources */,
@@ -489,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppTmdbCice/Preview Content\"";
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -518,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppTmdbCice/Preview Content\"";
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

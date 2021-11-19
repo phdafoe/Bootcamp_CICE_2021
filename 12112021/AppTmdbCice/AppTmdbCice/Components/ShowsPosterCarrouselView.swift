@@ -11,7 +11,7 @@ struct ShowsPosterCarrouselView: View {
     
     var title: String
     var isPosterFromShowsView: Bool
-    var showsModel: [ResultShows]
+    var showsModel: [MoviesShowsModel]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -28,7 +28,8 @@ struct ShowsPosterCarrouselView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.showsModel) { show in
-                        ShowsPosterCell(model: show, isPoster: self.isPosterFromShowsView)
+                        ShowsPosterCell(model: show,
+                                        isPoster: self.isPosterFromShowsView)
                     }
                 }
             }
@@ -40,9 +41,9 @@ struct ShowsPosterCell: View {
     
     @ObservedObject var imageLoaderVM = ImageLoader()
     private var isPoster: Bool
-    private var modelData: ResultShows
+    private var modelData: MoviesShowsModel
     
-    init(model: ResultShows, isPoster: Bool? = true) {
+    init(model: MoviesShowsModel, isPoster: Bool? = true) {
         self.modelData = model
         self.isPoster = isPoster ?? false
         if isPoster ?? false {
@@ -86,10 +87,10 @@ struct ShowsPosterCell: View {
     }
 }
 
-struct ShowsPosterCarrouselView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShowsPosterCarrouselView(title: "Airing Today",
-                                 isPosterFromShowsView: true,
-                                 showsModel: ShowsModel.stubbedShowsModel)
-    }
-}
+//struct ShowsPosterCarrouselView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ShowsPosterCarrouselView(title: "Airing Today",
+//                                 isPosterFromShowsView: true,
+//                                 showsModel: ShowsModel.stubbedShowsModel)
+//    }
+//}

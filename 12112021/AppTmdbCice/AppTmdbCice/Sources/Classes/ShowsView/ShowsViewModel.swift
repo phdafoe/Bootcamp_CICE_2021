@@ -9,18 +9,18 @@ import Foundation
 
 // Output - Interactor
 protocol ShowsInteractorOutputProtocol: BaseInteractorOutputProtocol {
-    func setInfoTvAiringTodayViewModel(data: [ResultShows]?)
-    func setInfoTvOnTheAirViewModel(data: [ResultShows]?)
-    func setInfoTvPopularViewModel(data: [ResultShows]?)
-    func setInfoTvTopRatedViewModel(data: [ResultShows]?)
+    func setInfoTvAiringTodayViewModel(data: [MoviesShowsModel]?)
+    func setInfoTvOnTheAirViewModel(data: [MoviesShowsModel]?)
+    func setInfoTvPopularViewModel(data: [MoviesShowsModel]?)
+    func setInfoTvTopRatedViewModel(data: [MoviesShowsModel]?)
 }
 
 final class ShowsViewModel: BaseViewModel, ObservableObject {
     
-    @Published var arrayTvAiringToday: [ResultShows] = []
-    @Published var arrayTvOnTheAir: [ResultShows] = []
-    @Published var arrayTvPopular: [ResultShows] = []
-    @Published var arrayTvTopRated: [ResultShows] = []
+    @Published var arrayTvAiringToday: [MoviesShowsModel] = []
+    @Published var arrayTvOnTheAir: [MoviesShowsModel] = []
+    @Published var arrayTvPopular: [MoviesShowsModel] = []
+    @Published var arrayTvTopRated: [MoviesShowsModel] = []
     
     var interactor: ShowsInteractorInputProtocol? {
         super.baseInteractor as? ShowsInteractorInputProtocol
@@ -36,22 +36,22 @@ final class ShowsViewModel: BaseViewModel, ObservableObject {
 
 // extension Output - Interactor
 extension ShowsViewModel: ShowsInteractorOutputProtocol {
-    func setInfoTvAiringTodayViewModel(data: [ResultShows]?) {
+    func setInfoTvAiringTodayViewModel(data: [MoviesShowsModel]?) {
         self.arrayTvAiringToday.removeAll()
         self.arrayTvAiringToday = data ?? []
     }
     
-    func setInfoTvOnTheAirViewModel(data: [ResultShows]?) {
+    func setInfoTvOnTheAirViewModel(data: [MoviesShowsModel]?) {
         self.arrayTvOnTheAir.removeAll()
         self.arrayTvOnTheAir = data ?? []
     }
     
-    func setInfoTvPopularViewModel(data: [ResultShows]?) {
+    func setInfoTvPopularViewModel(data: [MoviesShowsModel]?) {
         self.arrayTvPopular.removeAll()
         self.arrayTvPopular = data ?? []
     }
     
-    func setInfoTvTopRatedViewModel(data: [ResultShows]?) {
+    func setInfoTvTopRatedViewModel(data: [MoviesShowsModel]?) {
         self.arrayTvTopRated.removeAll()
         self.arrayTvTopRated = data ?? []
     }

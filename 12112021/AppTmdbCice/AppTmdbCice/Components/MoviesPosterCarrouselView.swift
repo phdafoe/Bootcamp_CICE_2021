@@ -11,7 +11,7 @@ struct MoviesPosterCarrouselView: View {
     
     var title: String
     var isPosterFromMoviesView: Bool
-    var moviesModel: [ResultNowPlaying]
+    var moviesModel: [MoviesShowsModel]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -29,7 +29,8 @@ struct MoviesPosterCarrouselView: View {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel) { movie in
                         NavigationLink(destination: DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(movieIdentifier: "\(movie.id ?? 0)"))) {
-                            MoviePosterCell(model: movie, isPoster: self.isPosterFromMoviesView)
+                            MoviePosterCell(model: movie,
+                                            isPoster: self.isPosterFromMoviesView)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
@@ -43,9 +44,9 @@ struct MoviePosterCell: View {
     
     @ObservedObject var imageLoaderVM = ImageLoader()
     private var isPoster: Bool
-    private var modelData: ResultNowPlaying
+    private var modelData: MoviesShowsModel
     
-    init(model: ResultNowPlaying, isPoster: Bool? = true) {
+    init(model: MoviesShowsModel, isPoster: Bool? = true) {
         self.modelData = model
         self.isPoster = isPoster ?? false
         if isPoster ?? false {
@@ -80,7 +81,7 @@ struct MoviePosterCell: View {
             .frame(width: self.isPoster ? 240 : 270, height: self.isPoster ? 306 : 150)
             
             if !self.isPoster {
-                Text(self.modelData.originalTitle ?? "")
+                Text(self.modelData.name ?? "")
                     .fontWeight(.semibold)
                     .padding(.top, 15)
                     .lineLimit(1)
@@ -89,10 +90,10 @@ struct MoviePosterCell: View {
     }
 }
 
-struct MoviesPosterCarrouselView_Previews: PreviewProvider {
-    static var previews: some View {
-        MoviesPosterCarrouselView(title: "Now Playing",
-                                  isPosterFromMoviesView: false,
-                                  moviesModel: MoviesModel.stubbedMoviesNowPlaying)
-    }
-}
+//struct MoviesPosterCarrouselView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MoviesPosterCarrouselView(title: "Now Playing",
+//                                  isPosterFromMoviesView: false,
+//                                  moviesModel: MoviesModel.stubbedMoviesNowPlaying)
+//    }
+//}

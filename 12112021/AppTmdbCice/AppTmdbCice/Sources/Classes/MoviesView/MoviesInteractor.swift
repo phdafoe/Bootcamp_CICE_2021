@@ -31,6 +31,20 @@ final class MoviesInteractor: BaseInteractor {
     var provider: MoviesProviderInputProtocol? {
         super.baseProvider as? MoviesProviderInputProtocol
     }
+    
+    func transformDataResultNowPlayingToMoviesShowsModel(data: [ResultNowPlaying]?) -> [MoviesShowsModel]? {
+        var arrayMoviesShowsModel: [MoviesShowsModel] = []
+        if let dataDes = data {
+            for index in 0..<dataDes.count {
+                let object = MoviesShowsModel(id: dataDes[index].id,
+                                              backdropPath: dataDes[index].backdropPath,
+                                              posterPath: dataDes[index].posterPath,
+                                              name: dataDes[index].originalTitle)
+                arrayMoviesShowsModel.append(object)
+            }
+        }
+        return arrayMoviesShowsModel
+    }
 }
 
 // extension Input
@@ -59,7 +73,7 @@ extension MoviesInteractor: MoviesProviderOutputProtocol {
     func setInfoNowPlaying(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoNowPlayingViewModel(data: data)
+            self.viewModel?.setInfoNowPlayingViewModel(data: self.transformDataResultNowPlayingToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -68,7 +82,7 @@ extension MoviesInteractor: MoviesProviderOutputProtocol {
     func setInfoPopular(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoPopularViewModel(data: data)
+            self.viewModel?.setInfoPopularViewModel(data: self.transformDataResultNowPlayingToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -77,7 +91,7 @@ extension MoviesInteractor: MoviesProviderOutputProtocol {
     func setInfoTopRated(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoTopRatedViewModel(data: data)
+            self.viewModel?.setInfoTopRatedViewModel(data: self.transformDataResultNowPlayingToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -86,7 +100,7 @@ extension MoviesInteractor: MoviesProviderOutputProtocol {
     func setInfoUpComing(completionData: Result<[ResultNowPlaying]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoUpComingViewModel(data: data)
+            self.viewModel?.setInfoUpComingViewModel(data: self.transformDataResultNowPlayingToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }

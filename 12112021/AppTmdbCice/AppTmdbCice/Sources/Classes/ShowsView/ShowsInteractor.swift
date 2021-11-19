@@ -31,6 +31,20 @@ final class ShowsInteractor: BaseInteractor {
     var provider: ShowsProviderInputProtocol? {
         super.baseProvider as? ShowsProviderInputProtocol
     }
+    
+    func transformDataResultShowsToMoviesShowsModel(data: [ResultShows]?) -> [MoviesShowsModel]? {
+        var arrayMoviesShowsModel: [MoviesShowsModel] = []
+        if let dataDes = data {
+            for index in 0..<dataDes.count {
+                let object = MoviesShowsModel(id: dataDes[index].id,
+                                              backdropPath: dataDes[index].backdropPath,
+                                              posterPath: dataDes[index].posterPath,
+                                              name: dataDes[index].name)
+                arrayMoviesShowsModel.append(object)
+            }
+        }
+        return arrayMoviesShowsModel
+    }
 }
 
 // extension Input
@@ -57,7 +71,7 @@ extension ShowsInteractor: ShowsProviderOutputProtocol {
     func setInfoTvAiringToday(completionData: Result<[ResultShows]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoTvAiringTodayViewModel(data: data)
+            self.viewModel?.setInfoTvAiringTodayViewModel(data: self.transformDataResultShowsToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -66,7 +80,7 @@ extension ShowsInteractor: ShowsProviderOutputProtocol {
     func setInfoTvOnTheAir(completionData: Result<[ResultShows]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoTvOnTheAirViewModel(data: data)
+            self.viewModel?.setInfoTvOnTheAirViewModel(data: self.transformDataResultShowsToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -75,7 +89,7 @@ extension ShowsInteractor: ShowsProviderOutputProtocol {
     func setInfoTvPopular(completionData: Result<[ResultShows]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoTvPopularViewModel(data: data)
+            self.viewModel?.setInfoTvPopularViewModel(data: self.transformDataResultShowsToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -84,7 +98,7 @@ extension ShowsInteractor: ShowsProviderOutputProtocol {
     func setInfoTvTopRated(completionData: Result<[ResultShows]?, NetworkingError>) {
         switch completionData{
         case .success(let data):
-            self.viewModel?.setInfoTvTopRatedViewModel(data: data)
+            self.viewModel?.setInfoTvTopRatedViewModel(data: self.transformDataResultShowsToMoviesShowsModel(data: data))
         case .failure(let error):
             debugPrint(error)
         }

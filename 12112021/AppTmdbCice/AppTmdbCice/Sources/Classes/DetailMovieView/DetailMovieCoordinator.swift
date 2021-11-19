@@ -25,8 +25,7 @@ final class DetailMovieCoordinator: BaseCoordinator {
         let vip = BaseCoordinator.coordinator(viewModel: ViewModel.self,
                                               interactor: Interactor.self,
                                               provider: Provider.self)
-        let view = ContentView(viewModel: vip.viewModel,
-                               movieIdentifier: dto?.movieIdentifier ?? "")
+        let view = ContentView()
         return view
     }
     

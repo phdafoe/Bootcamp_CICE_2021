@@ -66,6 +66,88 @@ struct DetailMovieModel: Codable {
         case videos = "videos"
         case credits = "credits"
     }
+    
+    var posterUrl: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")")!
+    }
+    
+    var genreText: String {
+        genres?.first?.name ?? "n/a"
+    }
+    
+    var durationText: String {
+        guard let runTimeDes = self.runtime, runTimeDes > 0 else  {
+            return "n/a"
+        }
+        return DetailMovieModel.durationFormatter.string(from: TimeInterval(runTimeDes) * 60) ?? "n/a"
+    }
+    
+    var yearText: String {
+        guard let releasedDateDes = self.releaseDate, let date = DetailMovieModel.dateFormatter.date(from: releasedDateDes) else {
+            return "n/a"
+        }
+        return DetailMovieModel.yearFormmater.string(from: date)
+    }
+    
+    var ratingText: String {
+        let rating = Int(voteAverage ?? 0)
+        let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
+            return acc + "★"
+        }
+        return ratingText
+    }
+    
+    var scoreText: String {
+        guard ratingText.count > 0 else {
+            return "n/a"
+        }
+        return "\(ratingText.count) / 10"
+    }
+    
+    var cast: [Cast]? {
+        credits?.cast
+    }
+    
+    var crew: [Crew]? {
+        credits?.crew
+    }
+    
+    var directors: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "director"}
+    }
+    
+    var producers: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "producers"}
+    }
+    
+    var screenWriters: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "story"}
+    }
+    
+    var youtubeTrailers: [ResultVideos]? {
+        videos?.results?.filter { $0.youtubeURL != nil }
+    }
+    
+    // Private lets
+    static private let durationFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .full
+        formatter.allowedUnits = [.hour, .minute]
+        return formatter
+    }()
+    
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter ()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        return dateFormatter
+    }()
+    
+    static private let yearFormmater: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
+    
 }
 
 // MARK: - BelongsToCollection
@@ -237,6 +319,13 @@ struct ResultVideos: Codable {
         case official = "official"
         case publishedAt = "published_at"
         case id = "id"
+    }
+    
+    var youtubeURL: URL? {
+        guard site == "Youtube" else {
+            return nil
+        }
+        return URL(string: "https://youtube.com/watch?v=\(key!)")
     }
 }
 
