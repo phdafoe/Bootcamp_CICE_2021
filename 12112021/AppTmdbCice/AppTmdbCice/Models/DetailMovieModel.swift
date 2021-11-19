@@ -177,7 +177,7 @@ struct Credits: Codable {
 }
 
 // MARK: - Cast
-struct Cast: Codable {
+struct Cast: Codable, Identifiable {
     let adult: Bool?
     let gender: Int?
     let id: Int?
@@ -205,10 +205,14 @@ struct Cast: Codable {
         case creditid = "credit_id"
         case order = "order"
     }
+    
+    var profilePathUrl: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(profilePath ?? "")")!
+    }
 }
 
 // MARK: - Crew
-struct Crew: Codable {
+struct Crew: Codable, Identifiable {
     let adult: Bool?
     let gender: Int?
     let id: Int?
@@ -296,7 +300,7 @@ struct Videos: Codable {
 }
 
 // MARK: - Result
-struct ResultVideos: Codable {
+struct ResultVideos: Codable, Identifiable {
     let iso639_1: String?
     let iso3166_1: String?
     let name: String?
@@ -322,7 +326,7 @@ struct ResultVideos: Codable {
     }
     
     var youtubeURL: URL? {
-        guard site == "Youtube" else {
+        guard site == "YouTube" else {
             return nil
         }
         return URL(string: "https://youtube.com/watch?v=\(key!)")
