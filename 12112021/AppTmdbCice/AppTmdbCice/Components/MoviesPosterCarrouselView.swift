@@ -28,7 +28,7 @@ struct MoviesPosterCarrouselView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel) { movie in
-                        NavigationLink(destination: DetailMovieView()) {
+                        NavigationLink(destination: DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(movieObject: movie))) {
                             MoviePosterCell(model: movie,
                                             isPoster: self.isPosterFromMoviesView)
                         }

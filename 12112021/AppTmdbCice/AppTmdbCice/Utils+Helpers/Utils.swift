@@ -55,7 +55,10 @@ struct URLEndpoint {
     static let endpointTvTopRated = "tv/top_rated?api_key=\(Constants.Api.apiKey)"
     
     // Endpoint Movie Detail
-    static let endpointDetailMovie = "movie/%@?api_key=\(Constants.Api.apiKey)&append_to_response=%@"
+    static let endpointDetailMovie = "movie/%@?api_key=\(Constants.Api.apiKey)&append_to_response=%@" // videos,credits
+    
+    // Endpoint Movie Recommendations
+    static let endpointMovieRecommendation = "/movie/%@/recommendations?api_key=\(Constants.Api.apiKey)"
     
 }
 
