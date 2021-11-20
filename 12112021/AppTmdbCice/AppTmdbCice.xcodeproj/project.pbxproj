@@ -14,6 +14,8 @@
 		B4382BBA2749195600EF5954 /* DetailShowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4382BB52749195600EF5954 /* DetailShowCoordinator.swift */; };
 		B4382BBB2749195600EF5954 /* DetailShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4382BB62749195600EF5954 /* DetailShowInteractor.swift */; };
 		B4382BBD274919E800EF5954 /* VIPUI Files.xctemplate.zip in Resources */ = {isa = PBXBuildFile; fileRef = B4382BBC274919E800EF5954 /* VIPUI Files.xctemplate.zip */; };
+		B4382BBF27491BD100EF5954 /* DetailShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4382BBE27491BD100EF5954 /* DetailShowModel.swift */; };
+		B4382BC227491F7700EF5954 /* DetailShow.json in Resources */ = {isa = PBXBuildFile; fileRef = B4382BC127491F7700EF5954 /* DetailShow.json */; };
 		B49ADBA7273EBD3800FDC3CD /* AppTmdbCiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADBA6273EBD3800FDC3CD /* AppTmdbCiceApp.swift */; };
 		B49ADBA9273EBD3800FDC3CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADBA8273EBD3800FDC3CD /* ContentView.swift */; };
 		B49ADBAB273EBD3C00FDC3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49ADBAA273EBD3C00FDC3CD /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		B4382BB52749195600EF5954 /* DetailShowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShowCoordinator.swift; sourceTree = "<group>"; };
 		B4382BB62749195600EF5954 /* DetailShowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShowInteractor.swift; sourceTree = "<group>"; };
 		B4382BBC274919E800EF5954 /* VIPUI Files.xctemplate.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "VIPUI Files.xctemplate.zip"; sourceTree = "<group>"; };
+		B4382BBE27491BD100EF5954 /* DetailShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShowModel.swift; sourceTree = "<group>"; };
+		B4382BC127491F7700EF5954 /* DetailShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DetailShow.json; sourceTree = "<group>"; };
 		B49ADBA3273EBD3800FDC3CD /* AppTmdbCice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTmdbCice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49ADBA6273EBD3800FDC3CD /* AppTmdbCiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTmdbCiceApp.swift; sourceTree = "<group>"; };
 		B49ADBA8273EBD3800FDC3CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				B49ADBC5273ED1ED00FDC3CD /* MoviesModel.swift */,
 				B4D81366273FCBBA00FE983B /* ShowsModel.swift */,
 				B4D8136E273FE50000FE983B /* DetailMovieModel.swift */,
+				B4382BBE27491BD100EF5954 /* DetailShowModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				B4D81364273FCB7400FE983B /* ShowsModel.json */,
 				B4D8136A273FE1B500FE983B /* DetailMovie.json */,
 				B4D8136B273FE1B600FE983B /* MoviesRecommended.json */,
+				B4382BC127491F7700EF5954 /* DetailShow.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				B4D81365273FCB7400FE983B /* ShowsModel.json in Resources */,
 				B49ADBAE273EBD3C00FDC3CD /* Preview Assets.xcassets in Resources */,
 				B4D8136D273FE1B600FE983B /* MoviesRecommended.json in Resources */,
+				B4382BC227491F7700EF5954 /* DetailShow.json in Resources */,
 				B49ADBC9273ED32900FDC3CD /* MoviesModel.json in Resources */,
 				B4382BBD274919E800EF5954 /* VIPUI Files.xctemplate.zip in Resources */,
 				B4D8136C273FE1B600FE983B /* DetailMovie.json in Resources */,
@@ -385,6 +392,7 @@
 				B49ADBBA273EC29A00FDC3CD /* MoviesView.swift in Sources */,
 				B4D8135B273FC5EA00FE983B /* ShowsView.swift in Sources */,
 				B4D81369273FD00100FE983B /* ShowsPosterCarrouselView.swift in Sources */,
+				B4382BBF27491BD100EF5954 /* DetailShowModel.swift in Sources */,
 				B4D81355273FAB8300FE983B /* Constants.swift in Sources */,
 				B4382BB82749195600EF5954 /* DetailShowProvider.swift in Sources */,
 				B4382BB72749195600EF5954 /* DetailShowViewModel.swift in Sources */,

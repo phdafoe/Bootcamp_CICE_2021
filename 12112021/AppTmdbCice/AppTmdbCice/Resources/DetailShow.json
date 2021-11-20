@@ -1,0 +1,269 @@
+{
+   "backdrop_path":"/qXnDtn1KF0nYX6vvCIcQc7XsNib.jpg",
+   "created_by":[
+
+   ],
+   "episode_run_time":[
+      45
+   ],
+   "first_air_date":"2021-10-28",
+   "genres":[
+      {
+         "id":18,
+         "name":"Drama"
+      }
+   ],
+   "homepage":"",
+   "id":135505,
+   "in_production":true,
+   "languages":[
+      "zh"
+   ],
+   "last_air_date":"2021-11-19",
+   "last_episode_to_air":{
+      "air_date":"2021-11-19",
+      "episode_number":24,
+      "id":3257289,
+      "name":"",
+      "overview":"",
+      "production_code":"",
+      "season_number":1,
+      "still_path":null,
+      "vote_average":0,
+      "vote_count":0
+   },
+   "name":"Out Of The Dream",
+   "next_episode_to_air":{
+      "air_date":"2021-11-20",
+      "episode_number":25,
+      "id":3309752,
+      "name":"",
+      "overview":"",
+      "production_code":"",
+      "season_number":1,
+      "still_path":null,
+      "vote_average":0,
+      "vote_count":0
+   },
+   "networks":[
+      {
+         "name":"iQiyi",
+         "id":1330,
+         "logo_path":"/t2HmORL2WgZdUUWyK2QOVIU6lwv.png",
+         "origin_country":"CN"
+      },
+      {
+         "name":"Tencent Video",
+         "id":2007,
+         "logo_path":"/uBCIoV9AUGIdfXTrtJ6CRIxOZF6.png",
+         "origin_country":"CN"
+      }
+   ],
+   "number_of_episodes":30,
+   "number_of_seasons":1,
+   "origin_country":[
+      "CN"
+   ],
+   "original_language":"zh",
+   "original_name":"梦见狮子",
+   "overview":"It tells the love story between a Peking opera performer and a stage play producer.\n\nPeking opera performer Yu Fei was kicked out by her teacher due to a mistake. Producer Bai Fei Li is looking to cast an actress with a background in Peking opera. As their paths cross, Yu Fei's powerful voice illuminates the stage. However, they lose contact due to an unfortunate death.\n\nWhen they meet again, Yu Fei is in the midst of preparing for drama school as Bai Fei Li faces an unprecedented crisis. Yu Fei begins working part-time for Bai Fei Li while he helps with her reviews for her entrance exam. With the grandparents giving things a little push, the two rekindle their relationship. Yet another problem arises bit this time can they work out their issues?",
+   "popularity":1449.45,
+   "poster_path":"/fZirczSB0Vtu4zpJ5utwuoWBtPH.jpg",
+   "production_companies":[
+
+   ],
+   "production_countries":[
+      {
+         "iso_3166_1":"CN",
+         "name":"China"
+      }
+   ],
+   "seasons":[
+      {
+         "air_date":"2021-10-28",
+         "episode_count":30,
+         "id":214122,
+         "name":"Season 1",
+         "overview":"",
+         "poster_path":null,
+         "season_number":1
+      }
+   ],
+   "spoken_languages":[
+      {
+         "english_name":"Mandarin",
+         "iso_639_1":"zh",
+         "name":"普通话"
+      }
+   ],
+   "status":"Returning Series",
+   "tagline":"",
+   "type":"Scripted",
+   "vote_average":2,
+   "vote_count":1,
+   "videos":{
+      "results":[
+         {
+            "iso_639_1":"en",
+            "iso_3166_1":"US",
+            "name":"Official Trailer: The Way Towards Dream | Out Of The Dream | 梦见狮子 | iQiyi",
+            "key":"fUJuOW1-amA",
+            "site":"YouTube",
+            "size":1080,
+            "type":"Trailer",
+            "official":false,
+            "published_at":"2021-10-28 12:00:33 UTC",
+            "id":"617bcdae0d5d850065f913a4"
+         },
+         {
+            "iso_639_1":"en",
+            "iso_3166_1":"US",
+            "name":"Official Trailer: Out Of The Dream | 梦见狮子 | iQiyi",
+            "key":"daUYfYfoeBk",
+            "site":"YouTube",
+            "size":1080,
+            "type":"Trailer",
+            "official":false,
+            "published_at":"2021-10-02 12:15:03 UTC",
+            "id":"617bcd9c3f7e1d008ed3520b"
+         }
+      ]
+   },
+   "credits":{
+      "cast":[
+         {
+            "adult":false,
+            "gender":2,
+            "id":3125559,
+            "known_for_department":"Acting",
+            "name":"Zeawo",
+            "original_name":"Zeawo",
+            "popularity":0.84,
+            "profile_path":"/ncLX1HE2knrpHkv1Us2ZkFcEgPI.jpg",
+            "character":"Bai Feili",
+            "credit_id":"617a7c4567825900627a91c7",
+            "order":0
+         },
+         {
+            "adult":false,
+            "gender":1,
+            "id":2263549,
+            "known_for_department":"Acting",
+            "name":"Yusi Chen",
+            "original_name":"Yusi Chen",
+            "popularity":2.789,
+            "profile_path":"/aw4m3hxi6O06Z4xGv2sdJfdyKVh.jpg",
+            "character":"Yu Fei",
+            "credit_id":"617a7c6f70b44400656c9053",
+            "order":1
+         },
+         {
+            "adult":false,
+            "gender":1,
+            "id":2633320,
+            "known_for_department":"Acting",
+            "name":"Fu Jing",
+            "original_name":"Fu Jing",
+            "popularity":1.62,
+            "profile_path":"/z5bx3jDviGzbmWsNsKF2Crdki5I.jpg",
+            "character":"Guan Jiu",
+            "credit_id":"617a7dc2be2d4900900d55b4",
+            "order":2
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":2949767,
+            "known_for_department":"Acting",
+            "name":"Xie Xingyang",
+            "original_name":"Xie Xingyang",
+            "popularity":1.214,
+            "profile_path":"/pWkusWYT6kgRWiIVdU3IWWaesQy.jpg",
+            "character":"Dao Ge",
+            "credit_id":"617a7de4d6dbba0091ea42e4",
+            "order":3
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":3149730,
+            "known_for_department":"Acting",
+            "name":"Wu Yuheng",
+            "original_name":"Wu Yuheng",
+            "popularity":0.828,
+            "profile_path":null,
+            "character":"Hao Shi",
+            "credit_id":"617a7eade323f3002596b8db",
+            "order":4
+         },
+         {
+            "adult":false,
+            "gender":1,
+            "id":3287640,
+            "known_for_department":"Acting",
+            "name":"Sun Zhenni",
+            "original_name":"Sun Zhenni",
+            "popularity":0.828,
+            "profile_path":null,
+            "character":"Ling Jiu",
+            "credit_id":"617a7f80be2d4900900d56bf",
+            "order":5
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":1674366,
+            "known_for_department":"Acting",
+            "name":"Shi An",
+            "original_name":"Shi An",
+            "popularity":0.828,
+            "profile_path":"/aKXtycTlJEIMD0gyiKe2jrz3zDo.jpg",
+            "character":"Ni Lin",
+            "credit_id":"617a7f95d388ae008aff8494",
+            "order":6
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":3287641,
+            "known_for_department":"Acting",
+            "name":"Sheng Gangshuai",
+            "original_name":"Sheng Gangshuai",
+            "popularity":0.828,
+            "profile_path":null,
+            "character":"Shu Ji",
+            "credit_id":"617a7fb8e323f30065c83a35",
+            "order":7
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":2318558,
+            "known_for_department":"Acting",
+            "name":"Jing Yanjun",
+            "original_name":"Jing Yanjun",
+            "popularity":1.614,
+            "profile_path":"/anAU2xpyjzCwOa7UTwS3oJosBZ3.jpg",
+            "character":"Xiao Zhu",
+            "credit_id":"617a7fdba097dc00427c9b78",
+            "order":8
+         },
+         {
+            "adult":false,
+            "gender":2,
+            "id":2551180,
+            "known_for_department":"Acting",
+            "name":"Sun Tianyu",
+            "original_name":"Sun Tianyu",
+            "popularity":0.6,
+            "profile_path":"/gFf98rR1Lez9wHzOPg22T6OGyqk.jpg",
+            "character":"",
+            "credit_id":"617a7fec678259002ab730a0",
+            "order":9
+         }
+      ],
+      "crew":[
+
+      ]
+   }
+}
