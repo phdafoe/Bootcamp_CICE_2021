@@ -43,22 +43,25 @@ struct URLEndpoint {
     }
     
     // Endpoint's of Movies
-    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Constants.Api.apiKey)"
-    static let endpointMoviesPopular = "movie/popular?api_key=\(Constants.Api.apiKey)"
-    static let endpointMoviesTopRated = "movie/top_rated?api_key=\(Constants.Api.apiKey)"
-    static let endpointMoviesUpComing = "movie/upcoming?api_key=\(Constants.Api.apiKey)"
+    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointMoviesPopular = "movie/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointMoviesTopRated = "movie/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointMoviesUpComing = "movie/upcoming?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
     
     // Endpoint's of Tv
-    static let endpointTvAiringToday = "tv/airing_today?api_key=\(Constants.Api.apiKey)"
-    static let endpointTvOnTheAir = "tv/on_the_air?api_key=\(Constants.Api.apiKey)"
-    static let endpointTvPopular = "tv/popular?api_key=\(Constants.Api.apiKey)"
-    static let endpointTvTopRated = "tv/top_rated?api_key=\(Constants.Api.apiKey)"
+    static let endpointTvAiringToday = "tv/airing_today?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointTvOnTheAir = "tv/on_the_air?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointTvPopular = "tv/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointTvTopRated = "tv/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
     
     // Endpoint Movie Detail
-    static let endpointDetailMovie = "movie/%@?api_key=\(Constants.Api.apiKey)&append_to_response=%@" // videos,credits
+    static let endpointDetailMovie = "movie/%@?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&append_to_response=%@" // videos,credits
+    static let endpointDetailShow = "tv/%@?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&append_to_response=%@"  // videos,credits
     
     // Endpoint Movie Recommendations
-    static let endpointMovieRecommendation = "/movie/%@/recommendations?api_key=\(Constants.Api.apiKey)"
+    static let endpointMovieRecommendation = "movie/%@/recommendations?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointShowsRecommendation = "tv/%@/recommendations?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    
     
 }
 

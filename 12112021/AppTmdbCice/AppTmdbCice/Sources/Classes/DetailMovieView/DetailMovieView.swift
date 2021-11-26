@@ -15,8 +15,8 @@ struct DetailMovieView: View {
     @SwiftUI.Environment(\.presentationMode) var presenterMode
     
     var body: some View {
-        ScrollView{
-            VStack{
+        ScrollView {
+            VStack {
                 headerView
                 
                 VStack(alignment: .leading, spacing: 30){
@@ -120,6 +120,7 @@ struct DetailMovieView: View {
                 .padding(.top, -50)
             }
         }
+        .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.all)
         .sheet(item: self.$selectedTrailer, content: { trailer in
@@ -128,11 +129,10 @@ struct DetailMovieView: View {
         .onAppear {
             self.viewModel.fetchDataDetailMovieModel()
         }
-        
     }
     
     var headerView: some View {
-        ZStack(alignment: .topLeading){
+        ZStack(alignment: .topLeading) {
             if self.viewModel.model?.posterUrl != nil {
                 MovieDetailImage(imageURL: self.viewModel.model!.posterUrl,
                                  imageLoderVM: imageLoader)
@@ -155,6 +155,7 @@ struct DetailMovieView: View {
                                     leading: 20,
                                     bottom: 0,
                                     trailing: 0))
+                
             }
             .foregroundColor(.red)
         }

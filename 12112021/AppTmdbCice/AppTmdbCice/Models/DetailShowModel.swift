@@ -38,7 +38,7 @@ struct DetailShowModel: Codable {
     let status: String?
     let tagline: String?
     let type: String?
-    let voteAverage: Int?
+    let voteAverage: Double?
     let voteCount: Int?
     let videos: Videos?
     let credits: Credits?
@@ -78,6 +78,87 @@ struct DetailShowModel: Codable {
         case videos = "videos"
         case credits = "credits"
     }
+    
+    var posterUrl: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")")!
+    }
+    
+    var genreText: String {
+        genres?.first?.name ?? "n/a"
+    }
+    
+//    var durationText: String {
+//        guard let runTimeDes = self.runtime, runTimeDes > 0 else  {
+//            return "n/a"
+//        }
+//        return DetailMovieModel.durationFormatter.string(from: TimeInterval(runTimeDes) * 60) ?? "n/a"
+//    }
+    
+    var yearText: String {
+        guard let releasedDateDes = self.firstAirDate, let date = DetailMovieModel.dateFormatter.date(from: releasedDateDes) else {
+            return "n/a"
+        }
+        return DetailShowModel.yearFormmater.string(from: date)
+    }
+    
+    var ratingText: String {
+        let rating = Int(voteAverage ?? 0)
+        let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
+            return acc + "★"
+        }
+        return ratingText
+    }
+    
+    var scoreText: String {
+        guard ratingText.count > 0 else {
+            return "n/a"
+        }
+        return "\(ratingText.count) / 10"
+    }
+    
+    var cast: [Cast]? {
+        credits?.cast
+    }
+    
+    var crew: [Crew]? {
+        credits?.crew
+    }
+    
+    var directors: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "director"}
+    }
+    
+    var producers: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "producers"}
+    }
+    
+    var screenWriters: [Crew]? {
+        crew?.filter { $0.job?.lowercased() == "story"}
+    }
+    
+    var youtubeTrailers: [ResultVideos]? {
+        videos?.results?.filter { $0.youtubeURL != nil }
+    }
+    
+    // Private lets
+    static private let durationFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .full
+        formatter.allowedUnits = [.hour, .minute]
+        return formatter
+    }()
+    
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter ()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        return dateFormatter
+    }()
+    
+    static private let yearFormmater: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
 }
 
 
@@ -91,7 +172,7 @@ struct TEpisodeToAir: Codable {
     let productionCode: String?
     let seasonNumber: Int?
     let stillPath: String?
-    let voteAverage: Int?
+    let voteAverage: Double?
     let voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -152,7 +233,6 @@ struct CreatedBy: Codable {
     let name: String?
     let gender: Int?
     let profile_path: String?
-    let episode_run_time: [Int]?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -160,7 +240,6 @@ struct CreatedBy: Codable {
         case name = "name"
         case gender = "gender"
         case profile_path = "profile_path"
-        case episode_run_time = "episode_run_time"
     }
     
 }

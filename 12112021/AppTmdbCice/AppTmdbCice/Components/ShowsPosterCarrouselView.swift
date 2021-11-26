@@ -28,8 +28,11 @@ struct ShowsPosterCarrouselView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.showsModel) { show in
-                        ShowsPosterCell(model: show,
-                                        isPoster: self.isPosterFromShowsView)
+                        NavigationLink(destination: DetailShowCoordinator.view(dto: DetailShowCoordinatorDTO(showObject: show))) {
+                            ShowsPosterCell(model: show,
+                                            isPoster: self.isPosterFromShowsView)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }

@@ -8,6 +8,7 @@
 import Foundation
 
 struct MoviesShowsModel: Identifiable {
+    
     let id: Int?
     let backdropPath: String?
     let posterPath: String?
