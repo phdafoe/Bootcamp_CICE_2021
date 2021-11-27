@@ -8,26 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("currentPage") var currentPage = 1
+    @EnvironmentObject var viewModelSession: LoginViewModel
+    
     var body: some View {
-        TabView {
-            MoviesCoordinator.navigation()
-                .tabItem {
-                    VStack{
-                        Image(systemName: "tv")
-                        Text("Movies")
-                    }
-                }
-            
-            ShowsCoordinator.navigation()
-                .tabItem {
-                    VStack{
-                        Image(systemName: "tv")
-                        Text("Tv")
-                    }
-                }
+        if currentPage > totalPages {
+            if self.viewModelSession.usuarioLogado != nil {
+                HomeView()
+            } else {
+                LoginView(tipoAutentication: .registro)
+            }
+        } else {
+            OnBoardingView()
         }
-        .accentColor(.red)
-        .environment(\.colorScheme, .dark)
     }
 }
 
