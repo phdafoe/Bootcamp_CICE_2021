@@ -21,8 +21,16 @@ struct HomeView: View {
             ShowsCoordinator.navigation()
                 .tabItem {
                     VStack{
-                        Image(systemName: "tv")
+                        Image(systemName: "play")
                         Text("Tv")
+                    }
+                }
+            
+            SearchCoordinator.navigation()
+                .tabItem {
+                    VStack{
+                        Image(systemName: "tv")
+                        Text("Search")
                     }
                 }
         }

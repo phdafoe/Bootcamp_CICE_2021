@@ -9,62 +9,76 @@ import SwiftUI
 
 struct MoviesView: View {
     
+    @EnvironmentObject var viewModelSession: LoginViewModel
     @ObservedObject var viewModel: MoviesViewModel
     
     var body: some View {
-        List{
-            Group{
-                if !self.viewModel.arrayMoviesNowPlaying.isEmpty {
-                    MoviesPosterCarrouselView(title: "Now Playing",
-                                              isPosterFromMoviesView: true,
-                                              moviesModel: self.viewModel.arrayMoviesNowPlaying)
+        if self.viewModelSession.usuarioLogado != nil {
+            List{
+                Group{
+                    if !self.viewModel.arrayMoviesNowPlaying.isEmpty {
+                        MoviesPosterCarrouselView(title: "Now Playing",
+                                                  isPosterFromMoviesView: true,
+                                                  moviesModel: self.viewModel.arrayMoviesNowPlaying)
+                    }
+                }.listRowInsets(EdgeInsets(top: 16,
+                                           leading: 0,
+                                           bottom: 8,
+                                           trailing: 0))
+                
+                Group{
+                    if !self.viewModel.arrayMoviesPopular.isEmpty {
+                        MoviesPosterCarrouselView(title: "Popular",
+                                                  isPosterFromMoviesView: false,
+                                                  moviesModel: self.viewModel.arrayMoviesPopular)
+                    }
                 }
-            }.listRowInsets(EdgeInsets(top: 16,
-                                       leading: 0,
-                                       bottom: 8,
-                                       trailing: 0))
-            
-            Group{
-                if !self.viewModel.arrayMoviesPopular.isEmpty {
-                    MoviesPosterCarrouselView(title: "Popular",
-                                              isPosterFromMoviesView: false,
-                                              moviesModel: self.viewModel.arrayMoviesPopular)
+                .listRowInsets(EdgeInsets(top: 16,
+                                           leading: 16,
+                                           bottom: 8,
+                                           trailing: 16))
+                
+                Group{
+                    if !self.viewModel.arrayMoviesTopRated.isEmpty {
+                        MoviesPosterCarrouselView(title: "Top Rated",
+                                                  isPosterFromMoviesView: false,
+                                                  moviesModel: self.viewModel.arrayMoviesTopRated)
+                    }
+                }
+                .listRowInsets(EdgeInsets(top: 16,
+                                           leading: 16,
+                                           bottom: 8,
+                                           trailing: 16))
+                
+                Group{
+                    if !self.viewModel.arrayMoviesUpComing.isEmpty {
+                        MoviesPosterCarrouselView(title: "Up Coming",
+                                                  isPosterFromMoviesView: true,
+                                                  moviesModel: self.viewModel.arrayMoviesUpComing)
+                    }
+                }
+                .listRowInsets(EdgeInsets(top: 16,
+                                           leading: 16,
+                                           bottom: 8,
+                                           trailing: 16))
+                
+                Group{
+                    Button(action: {
+                        self.viewModelSession.desconectarSesion()
+                    }) {
+                        Text("logout")
+                    }
                 }
             }
-            .listRowInsets(EdgeInsets(top: 16,
-                                       leading: 16,
-                                       bottom: 8,
-                                       trailing: 16))
-            
-            Group{
-                if !self.viewModel.arrayMoviesTopRated.isEmpty {
-                    MoviesPosterCarrouselView(title: "Top Rated",
-                                              isPosterFromMoviesView: false,
-                                              moviesModel: self.viewModel.arrayMoviesTopRated)
-                }
+            .listStyle(PlainListStyle())
+            .navigationBarTitle("Movies")
+            .onAppear {
+                self.viewModel.fetchData()
             }
-            .listRowInsets(EdgeInsets(top: 16,
-                                       leading: 16,
-                                       bottom: 8,
-                                       trailing: 16))
-            
-            Group{
-                if !self.viewModel.arrayMoviesUpComing.isEmpty {
-                    MoviesPosterCarrouselView(title: "Up Coming",
-                                              isPosterFromMoviesView: true,
-                                              moviesModel: self.viewModel.arrayMoviesUpComing)
-                }
-            }
-            .listRowInsets(EdgeInsets(top: 16,
-                                       leading: 16,
-                                       bottom: 8,
-                                       trailing: 16))
+        } else {
+            ContentView()
         }
-        .listStyle(PlainListStyle())
-        .navigationBarTitle("Movies")
-        .onAppear {
-            self.viewModel.fetchData()
-        }
+        
     }
 }
 

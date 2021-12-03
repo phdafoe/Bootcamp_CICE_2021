@@ -43,7 +43,7 @@ struct URLEndpoint {
     }
     
     // Endpoint's of Movies
-    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))" //e260c34cd5cff1c6f9d3f586c7230da4
     static let endpointMoviesPopular = "movie/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
     static let endpointMoviesTopRated = "movie/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
     static let endpointMoviesUpComing = "movie/upcoming?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
@@ -61,6 +61,9 @@ struct URLEndpoint {
     // Endpoint Movie Recommendations
     static let endpointMovieRecommendation = "movie/%@/recommendations?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
     static let endpointShowsRecommendation = "tv/%@/recommendations?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    
+    // Buscador de peliculas
+    static let endpointSearchMovie = "search/movie?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&query=%@"
     
     
 }
