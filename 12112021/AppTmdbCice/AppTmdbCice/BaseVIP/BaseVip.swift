@@ -7,12 +7,33 @@
 
 import Foundation
 
+enum ViewModelState: String {
+    case ok
+    case loading
+    case error
+}
+
+
 protocol BaseInteractorInputProtocol: AnyObject {}
 protocol BaseInteractorOutputProtocol: AnyObject {}
 protocol BaseProviderInputProtocol: AnyObject {}
 protocol BaseProviderOutputProtocol: AnyObject {}
 
 class BaseViewModel {
+    
+    @Published var state: ViewModelState = .ok
+    
+    func changheState() {
+        let option = Int.random(in: 0..<3)
+        switch option {
+        case 0: self.state = .ok
+        case 1: self.state = .loading
+        case 2: self.state = .error
+        default: self.state = .ok
+        }
+    }
+    
+    
     internal var baseInteractor: BaseInteractorInputProtocol?
     required init() {}
 }

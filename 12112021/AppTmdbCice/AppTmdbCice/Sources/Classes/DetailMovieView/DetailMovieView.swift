@@ -129,6 +129,7 @@ struct DetailMovieView: View {
         .onAppear {
             self.viewModel.fetchDataDetailMovieModel()
         }
+        .loader(state: self.viewModel.state)
     }
     
     var headerView: some View {
@@ -217,10 +218,18 @@ struct MovieCastCell: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
                     .clipShape(Circle())
+                    .loader(state: .ok)
                 VStack(alignment: .leading, spacing: 5) {
                     Text(self.modelCast.name ?? "")
                         .font(.headline)
                 }
+            } else {
+                Circle()
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]),
+                                         startPoint: .bottom,
+                                         endPoint: .top))
+                    .clipShape(Circle())
+                    .loader(state: .loading)
             }
         }
         .onAppear {

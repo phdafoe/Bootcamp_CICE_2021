@@ -23,6 +23,7 @@ final class DetailMovieViewModel: BaseViewModel, ObservableObject {
     @Published var arrayMoviesRecommended: [MoviesShowsModel] = []
     
     func fetchDataDetailMovieModel() {
+        self.state = .loading
         self.interactor?.fetchDataDetailMovieModelInteractor()
         self.interactor?.fetchDataMovieRecommendationsInteractor()
     }
@@ -33,11 +34,13 @@ extension DetailMovieViewModel: DetailMovieInteractorOutputProtocol {
 
     func setInfoDetailMovieViewModel(data: DetailMovieModel?) {
         self.model = data
+        self.state = .ok
     }
     
     func setInfoMovieRecommendedViewModel(data: [MoviesShowsModel]?) {
         self.arrayMoviesRecommended.removeAll()
         self.arrayMoviesRecommended = data ?? []
+        self.state = .ok
     }
   
 }

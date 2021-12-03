@@ -59,6 +59,8 @@
 		B4FA26E52752280F00C18BAC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA26E42752280F00C18BAC /* LoginView.swift */; };
 		B4FA26E727522B8800C18BAC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA26E627522B8800C18BAC /* LoginViewModel.swift */; };
 		B4FA26E92752358E00C18BAC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA26E82752358E00C18BAC /* CustomTextField.swift */; };
+		B4FA26EB275255FD00C18BAC /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA26EA275255FD00C18BAC /* HudView.swift */; };
+		B4FA26EF2752582700C18BAC /* LoaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA26EE2752582700C18BAC /* LoaderModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		B4FA26E42752280F00C18BAC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B4FA26E627522B8800C18BAC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B4FA26E82752358E00C18BAC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		B4FA26EA275255FD00C18BAC /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		B4FA26EE2752582700C18BAC /* LoaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 		B49ADBA5273EBD3800FDC3CD /* AppTmdbCice */ = {
 			isa = PBXGroup;
 			children = (
+				B4FA26EC275257F000C18BAC /* ViewModifiers */,
 				B4BD29A12751664800467BD8 /* GoogleService-Info.plist */,
 				B4077C5F2747F8B900A26AE3 /* ModelView */,
 				B4D81351273FAB8300FE983B /* UIKitViews */,
@@ -264,6 +269,7 @@
 				B49ADBDA273EECC300FDC3CD /* MoviesPosterCarrouselView.swift */,
 				B4D81368273FD00100FE983B /* ShowsPosterCarrouselView.swift */,
 				B4FA26E82752358E00C18BAC /* CustomTextField.swift */,
+				B4FA26EA275255FD00C18BAC /* HudView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -352,6 +358,22 @@
 				B4FA26E627522B8800C18BAC /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B4FA26EC275257F000C18BAC /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B4FA26ED2752580400C18BAC /* LoaderModifier */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		B4FA26ED2752580400C18BAC /* LoaderModifier */ = {
+			isa = PBXGroup;
+			children = (
+				B4FA26EE2752582700C18BAC /* LoaderModifier.swift */,
+			);
+			path = LoaderModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,8 +489,10 @@
 				B49ADBC6273ED1ED00FDC3CD /* MoviesModel.swift in Sources */,
 				B49ADBA9273EBD3800FDC3CD /* ContentView.swift in Sources */,
 				B4D81358273FAB8300FE983B /* SafariView.swift in Sources */,
+				B4FA26EB275255FD00C18BAC /* HudView.swift in Sources */,
 				B4D81378273FE74C00FE983B /* DetailMovieProvider.swift in Sources */,
 				B4D8135F273FC63800FE983B /* ShowsInteractor.swift in Sources */,
+				B4FA26EF2752582700C18BAC /* LoaderModifier.swift in Sources */,
 				B4BD29AB27516C9400467BD8 /* OnBoardingView.swift in Sources */,
 				B4382BBB2749195600EF5954 /* DetailShowInteractor.swift in Sources */,
 				B4077C612747F98400A26AE3 /* MoviesShowsModel.swift in Sources */,
