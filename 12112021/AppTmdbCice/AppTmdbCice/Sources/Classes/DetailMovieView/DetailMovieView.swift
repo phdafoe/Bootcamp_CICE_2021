@@ -81,25 +81,29 @@ struct DetailMovieView: View {
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                    }
+                    }.padding(.bottom, self.viewModel.model?.youtubeTrailers?.isEmpty ?? false ? 100 : 0)
                     
                     if self.viewModel.model?.youtubeTrailers != nil && !(self.viewModel.model?.youtubeTrailers?.isEmpty ?? false) {
-                        Text("Trailers")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        ForEach((self.viewModel.model?.youtubeTrailers)!) { item in
-                            Button {
-                                self.selectedTrailer = item
-                            } label: {
-                                HStack{
-                                    Text(item.name ?? "")
-                                    Spacer()
-                                    Image(systemName: "play.circle.fill")
-                                        .foregroundColor(Color.red)
+                        VStack(alignment: .leading, spacing: 20) {
+                            Text("Trailers")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            ForEach((self.viewModel.model?.youtubeTrailers)!) { item in
+                                Button {
+                                    self.selectedTrailer = item
+                                } label: {
+                                    HStack{
+                                        Text(item.name ?? "")
+                                        Spacer()
+                                        Image(systemName: "play.circle.fill")
+                                            .foregroundColor(Color.red)
+                                    }
                                 }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
+                        .padding(.bottom, self.viewModel.arrayMoviesRecommended.isEmpty ? 100 : 0)
+                        
                     }
                     
                     Group{
@@ -197,7 +201,7 @@ struct MovieCastCrrousel: View {
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .top, spacing: 12) {
                     ForEach(self.model) { item in
-                        MovieCastCell(modelCast: item)
+                        MovieCastCell(model: item)
                     }
                 }
             }
@@ -209,6 +213,11 @@ struct MovieCastCell: View {
     
     let modelCast: Cast
     @ObservedObject var imageLoaderVM = ImageLoader()
+    
+    init(model: Cast) {
+        self.modelCast = model
+        self.imageLoaderVM.loadImage(whit: self.modelCast.profilePathUrl)
+    }
     
     var body: some View {
         HStack{
@@ -231,9 +240,6 @@ struct MovieCastCell: View {
                     .clipShape(Circle())
                     .loader(state: .loading)
             }
-        }
-        .onAppear {
-            self.imageLoaderVM.loadImage(whit: self.modelCast.profilePathUrl)
         }
     }
 }

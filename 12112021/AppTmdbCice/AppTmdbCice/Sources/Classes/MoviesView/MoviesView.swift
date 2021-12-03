@@ -62,11 +62,13 @@ struct MoviesView: View {
                                            bottom: 8,
                                            trailing: 16))
                 
-                Group{
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
                         self.viewModelSession.desconectarSesion()
                     }) {
-                        Text("logout")
+                        Text("Logout")
                     }
                 }
             }
