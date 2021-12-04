@@ -7,7 +7,7 @@ import Foundation
 
 // Mark: - Input Interactor
 protocol ShowsFavoriteInteractorInputProtocol: BaseInteractorInputProtocol {
-    
+    func fetchDataDetailMovieFromFirebaseInteractor()
 }
 
 // Mark: - Output -> Provider
@@ -30,6 +30,9 @@ final class ShowsFavoriteInteractor: BaseInteractor {
 // Mark: - extension -> Input Interactor
 extension ShowsFavoriteInteractor: ShowsFavoriteInteractorInputProtocol {
 
+    func fetchDataDetailMovieFromFirebaseInteractor() {
+        self.provider?.fetchDataDetailMovieFromFirebase()
+    }
 }
 
 // Mark: - extension Output -> Provider

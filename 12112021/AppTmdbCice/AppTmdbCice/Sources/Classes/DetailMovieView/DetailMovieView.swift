@@ -13,6 +13,7 @@ struct DetailMovieView: View {
     @State private var selectedTrailer: ResultVideos?
     private let imageLoader = ImageLoader()
     @SwiftUI.Environment(\.presentationMode) var presenterMode
+    @State var isFavoriteSelected = false
     
     var body: some View {
         ScrollView {
@@ -160,6 +161,21 @@ struct DetailMovieView: View {
                                     leading: 20,
                                     bottom: 0,
                                     trailing: 0))
+                Spacer()
+                
+                Button(action: {
+                    self.isFavoriteSelected.toggle()
+                    self.viewModel.saveFavoriteInFirebase()
+                }) {
+                    Image(systemName: self.isFavoriteSelected ? "bookmark.fill" : "bookmark")
+                }
+                .padding()
+                .background(Color.white.opacity(0.7))
+                .clipShape(Circle())
+                .padding(EdgeInsets(top: 40,
+                                    leading: 0,
+                                    bottom: 0,
+                                    trailing: 20))
                 
             }
             .foregroundColor(.red)

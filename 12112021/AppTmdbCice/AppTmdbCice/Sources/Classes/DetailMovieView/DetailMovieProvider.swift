@@ -7,11 +7,13 @@
 
 import Foundation
 import Combine
+import FirebaseFirestore
 
 // Input
 protocol DetailMovieProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataDetailMovieWithParameters()
     func fetchDataMovieRecommendationsProvider()
+    func saveDataInFirebaseDBProvider(data: DetailMovieModel)
 }
 
 final class DetailMovieProvider: BaseProvider {
@@ -25,6 +27,7 @@ final class DetailMovieProvider: BaseProvider {
     
     var movieObject: MoviesShowsModel?
     let supportParameters = "videos,credits"
+    private var dbFirebase = Firestore.firestore()
     
 }
 
@@ -76,6 +79,19 @@ extension DetailMovieProvider: DetailMovieProviderInputProtocol {
                 self.interactor?.setInfoMovieRecommended(completionData: .success(resultData.results))
             }
             .store(in: &cancellable)
+    }
+    
+    func saveDataInFirebaseDBProvider(data: DetailMovieModel) {
+        let movieId = "\(movieObject?.id ?? 0)"
+        if "\(data.id ?? 0)" == movieId {
+            dbFirebase.collection("myFavourites").document("movies").setData(["id": "\(data.id ?? 0)"]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+        }
     }
     
 }

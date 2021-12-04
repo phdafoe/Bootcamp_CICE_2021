@@ -18,6 +18,10 @@ final class ShowsFavoriteViewModel: BaseViewModel, ObservableObject {
         super.baseInteractor as? ShowsFavoriteInteractorInputProtocol
     }
     
+    func fetchDataDetailMovie() {
+        self.interactor?.fetchDataDetailMovieFromFirebaseInteractor()
+    }
+    
 }
 
 // Mark: - extension Output ->  Interactor

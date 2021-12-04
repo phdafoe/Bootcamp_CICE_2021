@@ -27,6 +27,11 @@ final class DetailMovieViewModel: BaseViewModel, ObservableObject {
         self.interactor?.fetchDataDetailMovieModelInteractor()
         self.interactor?.fetchDataMovieRecommendationsInteractor()
     }
+    
+    func saveFavoriteInFirebase() {
+        guard let modelDes = self.model else { return }
+        self.interactor?.saveDataInFirebaseDB(data: modelDes)
+    }
 }
 
 // extension Output - Interactor

@@ -17,7 +17,7 @@ struct ShowsFavoriteView: View {
                 .fontWeight(.bold)
         }
         .onAppear{
-            
+            self.viewModel.fetchDataDetailMovie()
         }
     }
 }
