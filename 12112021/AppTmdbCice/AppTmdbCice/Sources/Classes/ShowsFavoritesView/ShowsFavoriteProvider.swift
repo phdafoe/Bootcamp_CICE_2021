@@ -26,8 +26,6 @@ final class ShowsFavoriteProvider: BaseProvider {
     private var dbFirebase = Firestore.firestore()
     let supportParameters = "videos,credits"
     
-
-    
     func getFromFirebaseFavouritesMovies(completionHandler: @escaping ([String]) -> ()) {
         var myFavourite: [String] = []
         dbFirebase.collection("myFavourites").document("movies").getDocument{ document, error in
@@ -50,7 +48,6 @@ extension ShowsFavoriteProvider: ShowsFavoriteProviderInputProtocol {
     func fetchDataDetailMovieFromFirebase() {
         
         self.getFromFirebaseFavouritesMovies { arrayString in
-            
             for item in arrayString{
                 let movieId = item
                 let parameters: [CVarArg] = [movieId, self.supportParameters]
